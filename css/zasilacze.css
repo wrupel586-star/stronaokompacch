@@ -1,0 +1,600 @@
+/* Styl dla strony zasilacze.html */
+
+/* PSU intro */
+.psu-intro {
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 30px;
+}
+
+.psu-intro h2 {
+    font-size: 2.2rem;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+}
+
+.psu-intro p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* PSU Calculator */
+.psu-calculator {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 50px;
+    border-radius: 15px;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.psu-calculator h2 {
+    text-align: center;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.psu-calculator > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.calculator-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.calculator-inputs {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.calc-component {
+    margin-bottom: 25px;
+}
+
+.calc-component label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #1a1a2e;
+    font-size: 1.1rem;
+}
+
+.calc-component select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+    transition: border-color 0.3s;
+}
+
+.calc-component select:focus {
+    border-color: #4cc9f0;
+    outline: none;
+}
+
+.calc-component input[type="range"] {
+    width: 100%;
+    margin: 15px 0;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    outline: none;
+}
+
+.calc-component input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4cc9f0;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.calc-component span {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    color: #4cc9f0;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.calc-component label[for="overclock"] {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.calc-component input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #4cc9f0;
+}
+
+.btn-calc {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #4cc9f0, #4361ee);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-calc:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(76, 201, 240, 0.3);
+}
+
+.calculator-result {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.result-card {
+    text-align: center;
+}
+
+.result-card h3 {
+    color: #1a1a2e;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+.power-result {
+    background: linear-gradient(135deg, #4cc9f0, #4361ee);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.power-value {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.power-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.recommendation {
+    margin-bottom: 30px;
+}
+
+.recommendation h4 {
+    color: #1a1a2e;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.rec-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4cc9f0;
+    margin-bottom: 15px;
+}
+
+.rec-note {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.efficiency-info h4 {
+    color: #1a1a2e;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.efficiency-badges {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.efficiency-badge {
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    min-width: 100px;
+}
+
+.efficiency-badge:hover {
+    border-color: #4cc9f0;
+}
+
+.efficiency-badge.active {
+    border-color: #4cc9f0;
+    background: #f0f8ff;
+}
+
+.efficiency-badge span {
+    display: block;
+    font-weight: bold;
+    color: #1a1a2e;
+}
+
+.efficiency-badge small {
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.efficiency-badge[data-level="bronze"] span { color: #cd7f32; }
+.efficiency-badge[data-level="silver"] span { color: #c0c0c0; }
+.efficiency-badge[data-level="gold"] span { color: #ffd700; }
+.efficiency-badge[data-level="platinum"] span { color: #e5e4e2; }
+.efficiency-badge[data-level="titanium"] span { color: #878681; }
+
+/* PSU Guide */
+.psu-guide {
+    margin-bottom: 60px;
+}
+
+.psu-guide h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a1a2e;
+    margin-bottom: 40px;
+}
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.guide-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.guide-card:hover {
+    transform: translateY(-10px);
+}
+
+.guide-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #4cc9f0, #4361ee);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.guide-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.guide-card h3 {
+    color: #1a1a2e;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.guide-card p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.guide-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.guide-card li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+    border-bottom: 1px dashed #eee;
+}
+
+.guide-card li:last-child {
+    border-bottom: none;
+}
+
+.guide-card li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4cc9f0;
+    font-weight: bold;
+}
+
+.efficiency-levels {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.level {
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.level.bronze { background: #f3e5d8; color: #cd7f32; }
+.level.silver { background: #f5f5f5; color: #c0c0c0; }
+.level.gold { background: #fff8e1; color: #ffd700; }
+.level.platinum { background: #e8e8e8; color: #e5e4e2; }
+.level.titanium { background: #f5f5f5; color: #878681; }
+
+/* PSU Recommendations */
+.psu-recommendations {
+    margin-bottom: 60px;
+}
+
+.psu-recommendations h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a1a2e;
+    margin-bottom: 40px;
+}
+
+.recommendation-tabs {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.rec-tab-buttons {
+    display: flex;
+    background: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+    overflow-x: auto;
+}
+
+.rec-tab-btn {
+    padding: 18px 30px;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+    position: relative;
+}
+
+.rec-tab-btn:hover {
+    color: #4cc9f0;
+    background: rgba(76, 201, 240, 0.05);
+}
+
+.rec-tab-btn.active {
+    color: #4cc9f0;
+    background: white;
+}
+
+.rec-tab-btn.active:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #4cc9f0;
+}
+
+.rec-tab-content {
+    padding: 30px;
+    display: none;
+}
+
+.rec-tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.psu-models-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.psu-model-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    border: 1px solid #eee;
+}
+
+.psu-model-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.psu-model-header {
+    padding: 25px;
+    background: linear-gradient(135deg, #4cc9f0, #4361ee);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.psu-model-header h3 {
+    font-size: 1.3rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.psu-wattage {
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.psu-model-specs {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.spec {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.spec i {
+    color: #4cc9f0;
+    width: 20px;
+    text-align: center;
+}
+
+.psu-model-price {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #4cc9f0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-top: 2px solid #e9ecef;
+}
+
+.psu-model-desc {
+    padding: 0 20px 20px;
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.psu-model-more {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background: #4cc9f0;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.psu-model-more:hover {
+    background: #3aa8cc;
+}
+
+/* Responsywność */
+@media (max-width: 992px) {
+    .calculator-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .guide-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .rec-tab-buttons {
+        flex-wrap: wrap;
+    }
+    
+    .rec-tab-btn {
+        flex: 1;
+        min-width: 120px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .psu-calculator {
+        padding: 30px 20px;
+    }
+    
+    .guide-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .psu-models-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .calculator-inputs,
+    .calculator-result {
+        padding: 20px;
+    }
+    
+    .power-value {
+        font-size: 2.8rem;
+    }
+    
+    .rec-value {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .psu-model-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .efficiency-badge {
+        min-width: 80px;
+        padding: 8px 10px;
+    }
+    
+    .psu-wattage {
+        font-size: 1.5rem;
+        padding: 8px 15px;
+    }
+}

@@ -1,0 +1,185 @@
+/* Styl dla strony historia.html */
+
+/* Page hero */
+.page-hero {
+    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #4cc9f0;
+}
+
+.page-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Historia timeline */
+.history-timeline {
+    margin-bottom: 60px;
+}
+
+.history-timeline h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #1a1a2e;
+}
+
+.history-card {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.history-card:nth-child(odd) {
+    flex-direction: row;
+}
+
+.history-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.history-image {
+    flex: 1;
+    min-height: 250px;
+    overflow: hidden;
+}
+
+.history-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.history-card:hover .history-image img {
+    transform: scale(1.05);
+}
+
+.history-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.history-content h3 {
+    color: #1a1a2e;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.history-content p {
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.history-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.history-content li {
+    padding: 5px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #666;
+}
+
+.history-content li:before {
+    content: "✓";
+    color: #4cc9f0;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Facts section */
+.history-facts {
+    margin-bottom: 60px;
+}
+
+.history-facts h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #1a1a2e;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.fact-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.fact-card i {
+    font-size: 2.5rem;
+    color: #4cc9f0;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.fact-card h3 {
+    color: #1a1a2e;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.fact-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsywność */
+@media (max-width: 992px) {
+    .history-card {
+        flex-direction: column !important;
+    }
+    
+    .history-image {
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero h2 {
+        font-size: 2rem;
+    }
+    
+    .page-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .history-content {
+        padding: 20px;
+    }
+}

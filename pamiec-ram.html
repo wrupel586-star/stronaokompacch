@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pamięć RAM - Świat Komputerów</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pamiec-ram.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/Designer (11).png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-memory"></i>
+                <h1>Pamięć RAM</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Strona Główna</a></li>
+                    <li><a href="komponenty.html"><i class="fas fa-microchip"></i> Komponenty</a></li>
+                    <li><a href="procesory.html"><i class="fas fa-microchip"></i> Procesory</a></li>
+                    <li><a href="pamiec-ram.html" class="active"><i class="fas fa-memory"></i> RAM</a></li>
+                    <li><a href="dyski.html"><i class="fas fa-hdd"></i> Dyski</a></li>
+                    <li><a href="plyty-glowne.html"><i class="fas fa-server"></i> Płyty Główne</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h2>Pamięć RAM</h2>
+            <p>Tymczasowa pamięć komputera - szybki dostęp do danych dla procesora</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="ram-intro">
+            <h2>Czym jest pamięć RAM?</h2>
+            <p>RAM (Random Access Memory) to pamięć operacyjna komputera, która przechowuje dane i programy aktualnie używane przez system. Im więcej RAM, tym płynniejsza wielozadaniowość.</p>
+        </section>
+
+        <section class="ram-calculator">
+            <h2>Kalkulator potrzebnej pamięci RAM</h2>
+            <p>Oblicz ile RAM potrzebuje Twój komputer</p>
+            
+            <div class="calculator-container">
+                <div class="calculator-inputs">
+                    <div class="calc-component">
+                        <label for="usage-type"><i class="fas fa-tasks"></i> Przeznaczenie:</label>
+                        <select id="usage-type">
+                            <option value="basic">Podstawowe (biuro, internet)</option>
+                            <option value="gaming">Gaming</option>
+                            <option value="creative" selected>Kreatywność (grafika, wideo)</option>
+                            <option value="workstation">Stacja robocza</option>
+                            <option value="server">Serwer</option>
+                        </select>
+                    </div>
+                    
+                    <div class="calc-component">
+                        <label for="ram-amount"><i class="fas fa-memory"></i> Obecna ilość RAM:</label>
+                        <select id="ram-amount">
+                            <option value="4">4 GB</option>
+                            <option value="8">8 GB</option>
+                            <option value="16" selected>16 GB</option>
+                            <option value="32">32 GB</option>
+                            <option value="64">64 GB</option>
+                        </select>
+                    </div>
+                    
+                    <div class="calc-component">
+                        <label><i class="fas fa-desktop"></i> Programy używane:</label>
+                        <div class="programs-checklist">
+                            <label><input type="checkbox" name="program" value="chrome" checked> Chrome/Firefox</label>
+                            <label><input type="checkbox" name="program" value="office" checked> Office</label>
+                            <label><input type="checkbox" name="program" value="photoshop"> Photoshop</label>
+                            <label><input type="checkbox" name="program" value="premiere"> Premiere Pro</label>
+                            <label><input type="checkbox" name="program" value="blender"> Blender/3D</label>
+                            <label><input type="checkbox" name="program" value="vm"> Maszyny wirtualne</label>
+                        </div>
+                    </div>
+                    
+                    <div class="calc-component">
+                        <label for="future-proof"><i class="fas fa-calendar-plus"></i> Future-proof:</label>
+                        <select id="future-proof">
+                            <option value="1">1 rok</option>
+                            <option value="2" selected>2 lata</option>
+                            <option value="3">3 lata</option>
+                            <option value="5">5 lat</option>
+                        </select>
+                    </div>
+                    
+                    <button id="calculate-ram" class="btn-calc">
+                        <i class="fas fa-calculator"></i> Oblicz potrzebny RAM
+                    </button>
+                </div>
+                
+                <div class="calculator-result">
+                    <div class="result-card">
+                        <h3>Rekomendacja RAM</h3>
+                        <div class="ram-result">
+                            <div class="ram-value">16 GB</div>
+                            <div class="ram-label">Zalecana ilość pamięci</div>
+                        </div>
+                        <div class="recommendation-details">
+                            <h4>Szczegóły rekomendacji:</h4>
+                            <ul class="rec-list">
+                                <li><i class="fas fa-check-circle"></i> <strong>Minimalnie:</strong> 8 GB</li>
+                                <li><i class="fas fa-star"></i> <strong>Rekomendowane:</strong> 16 GB</li>
+                                <li><i class="fas fa-rocket"></i> <strong>Optymalnie:</strong> 32 GB</li>
+                            </ul>
+                            <div class="speed-recommendation">
+                                <h5>Rekomendowana prędkość:</h5>
+                                <div class="speed-value">3200 MHz</div>
+                                <p class="speed-note">DDR4 dla platform Intel/AMD</p>
+                            </div>
+                        </div>
+                        <div class="configuration-tip">
+                            <h5>💡 Wskazówka konfiguracyjna:</h5>
+                            <p>Kup 2 moduły zamiast 1 (dual-channel) dla lepszej wydajności.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ram-types">
+            <h2>Rodzaje pamięci RAM</h2>
+            <div class="types-grid">
+                <div class="type-card">
+                    <div class="type-icon ddr4">
+                        <i class="fas fa-4"></i>
+                    </div>
+                    <h3>DDR4</h3>
+                    <div class="type-specs">
+                        <span><i class="fas fa-tachometer-alt"></i> 2133-3200 MHz</span>
+                        <span><i class="fas fa-bolt"></i> 1.2V</span>
+                        <span><i class="fas fa-microchip"></i> 288-pin</span>
+                    </div>
+                    <p>Standardowa pamiść dla większości obecnych systemów. Dobry stosunek ceny do wydajności.</p>
+                    <div class="type-status">Aktualny standard</div>
+                </div>
+                
+                <div class="type-card">
+                    <div class="type-icon ddr5">
+                        <i class="fas fa-5"></i>
+                    </div>
+                    <h3>DDR5</h3>
+                    <div class="type-specs">
+                        <span><i class="fas fa-tachometer-alt"></i> 4800-6400+ MHz</span>
+                        <span><i class="fas fa-bolt"></i> 1.1V</span>
+                        <span><i class="fas fa-microchip"></i> 288-pin</span>
+                    </div>
+                    <p>Nowa generacja z podwójną przepustowością. Wymaga nowszych płyt głównych.</p>
+                    <div class="type-status">Nowa generacja</div>
+                </div>
+                
+                <div class="type-card">
+                    <div class="type-icon sodimm">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>SODIMM</h3>
+                    <div class="type-specs">
+                        <span><i class="fas fa-compress-alt"></i> Mniejszy rozmiar</span>
+                        <span><i class="fas fa-laptop"></i> Laptopy</span>
+                        <span><i class="fas fa-microchip"></i> 260-pin</span>
+                    </div>
+                    <p>Wersja dla laptopów i mini-PC. Mniejszy rozmiar, ta sama technologia.</p>
+                    <div class="type-status">Do laptopów</div>
+                </div>
+                
+                <div class="type-card">
+                    <div class="type-icon ecc">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>ECC</h3>
+                    <div class="type-specs">
+                        <span><i class="fas fa-check-double"></i> Korekcja błędów</span>
+                        <span><i class="fas fa-server"></i> Serwery</span>
+                        <span><i class="fas fa-briefcase"></i> Workstation</span>
+                    </div>
+                    <p>Pamięć z korekcją błędów dla krytycznych aplikacji i serwerów.</p>
+                    <div class="type-status">Profesjonalna</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ram-timings">
+            <h2>Opóźnienia (Timings) RAM</h2>
+            <p>CL (CAS Latency) - niższe wartości oznaczają mniejsze opóźnienia</p>
+            
+            <div class="timings-explanation">
+                <div class="timing-card">
+                    <h3>CL16</h3>
+                    <div class="timing-value">Dobre opóźnienia</div>
+                    <p>Standard dla większości pamięci DDR4 3200MHz. Dobry balans ceny i wydajności.</p>
+                    <div class="timing-example">
+                        <span>Przykład: 16-18-18-38</span>
+                    </div>
+                </div>
+                
+                <div class="timing-card">
+                    <h3>CL14</h3>
+                    <div class="timing-value">Niskie opóźnienia</div>
+                    <p>Wydajnościowe moduły, droższe. Lepsze dla gaming i aplikacji wrażliwych na opóźnienia.</p>
+                    <div class="timing-example">
+                        <span>Przykład: 14-14-14-34</span>
+                    </div>
+                </div>
+                
+                <div class="timing-card">
+                    <h3>CL18-22</h3>
+                    <div class="timing-value">Wyższe opóźnienia</div>
+                    <p>Częste w tańszych modułach i pamięciach DDR5. Wyższe taktowanie kompensuje opóźnienia.</p>
+                    <div class="timing-example">
+                        <span>Przykład: 18-22-22-42</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timings-table">
+                <h4>Porównanie timingów:</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Prędkość</th>
+                            <th>Typowe CL</th>
+                            <th>Rekomendacja</th>
+                            <th>Cena względna</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>DDR4 2666 MHz</td>
+                            <td>CL16-19</td>
+                            <td>Biurowe</td>
+                            <td>💰</td>
+                        </tr>
+                        <tr>
+                            <td>DDR4 3200 MHz</td>
+                            <td>CL16</td>
+                            <td>Gaming/Uniwersalne</td>
+                            <td>💰💰</td>
+                        </tr>
+                        <tr>
+                            <td>DDR4 3600 MHz</td>
+                            <td>CL16-18</td>
+                            <td>Gaming/Enthusiast</td>
+                            <td>💰💰💰</td>
+                        </tr>
+                        <tr>
+                            <td>DDR5 4800 MHz</td>
+                            <td>CL40</td>
+                            <td>Nowe systemy</td>
+                            <td>💰💰💰💰</td>
+                        </tr>
+                        <tr>
+                            <td>DDR5 6000 MHz</td>
+                            <td>CL30-36</td>
+                            <td>High-End</td>
+                            <td>💰💰💰💰💰</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="ram-recommendations">
+            <h2>Rekomendowane zestawy RAM</h2>
+            <div class="recommendation-tabs">
+                <div class="rec-tab-buttons">
+                    <button class="rec-tab-btn active" data-category="budget">Budżetowe</button>
+                    <button class="rec-tab-btn" data-category="gaming">Gaming</button>
+                    <button class="rec-tab-btn" data-category="rgb">RGB/Estetyka</button>
+                    <button class="rec-tab-btn" data-category="performance">Wydajnościowe</button>
+                </div>
+                
+                <div class="rec-tab-content active" id="rec-budget">
+                    <div class="ram-models-grid">
+                        <!-- Modele budżetowe -->
+                        <div class="ram-model-card">
+                            <div class="ram-model-header">
+                                <h3>Crucial DDR4 8GB 3200MHz</h3>
+                                <div class="ram-config">1x8GB</div>
+                            </div>
+                            <div class="ram-model-specs">
+                                <span class="spec"><i class="fas fa-tachometer-alt"></i> 3200 MHz</span>
+                                <span class="spec"><i class="fas fa-clock"></i> CL22</span>
+                                <span class="spec"><i class="fas fa-bolt"></i> 1.2V</span>
+                            </div>
+                            <div class="ram-model-price">≈ 120 zł</div>
+                            <div class="ram-model-desc">
+                                Podstawowy moduł do upgrade'u laptopów i biurowych PC.
+                            </div>
+                            <a href="#" class="ram-model-more">Zobacz szczegóły</a>
+                        </div>
+                        
+                        <div class="ram-model-card">
+                            <div class="ram-model-header">
+                                <h3>Goodram DDR4 16GB 3200MHz</h3>
+                                <div class="ram-config">2x8GB</div>
+                            </div>
+                            <div class="ram-model-specs">
+                                <span class="spec"><i class="fas fa-tachometer-alt"></i> 3200 MHz</span>
+                                <span class="spec"><i class="fas fa-clock"></i> CL16</span>
+                                <span class="spec"><i class="fas fa-bolt"></i> 1.35V</span>
+                            </div>
+                            <div class="ram-model-price">≈ 250 zł</div>
+                            <div class="ram-model-desc">
+                                Dobry zestaw dual-channel w rozsądnej cenie. Polska marka.
+                            </div>
+                            <a href="#" class="ram-model-more">Zobacz szczegóły</a>
+                        </div>
+                        
+                        <div class="ram-model-card">
+                            <div class="ram-model-header">
+                                <h3>Kingston Fury Beast 16GB</h3>
+                                <div class="ram-config">2x8GB</div>
+                            </div>
+                            <div class="ram-model-specs">
+                                <span class="spec"><i class="fas fa-tachometer-alt"></i> 3200 MHz</span>
+                                <span class="spec"><i class="fas fa-clock"></i> CL16</span>
+                                <span class="spec"><i class="fas fa-bolt"></i> 1.35V</span>
+                            </div>
+                            <div class="ram-model-price">≈ 280 zł</div>
+                            <div class="ram-model-desc">
+                                Niebieskie aluminiowe chłodzenie. XMP 2.0 support.
+                            </div>
+                            <a href="#" class="ram-model-more">Zobacz szczegóły</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="rec-tab-content" id="rec-gaming">
+                    <div class="ram-models-grid">
+                        <!-- Modele gamingowe -->
+                        <div class="ram-model-card">
+                            <div class="ram-model-header">
+                                <h3>Corsair Vengeance LPX 16GB</h3>
+                                <div class="ram-config">2x8GB</div>
+                            </div>
+                            <div class="ram-model-specs">
+                                <span class="spec"><i class="fas fa-tachometer-alt"></i> 3600 MHz</span>
+                                <span class="spec"><i class="fas fa-clock"></i> CL18</span>
+                                <span class="spec"><i class="fas fa-bolt"></i> 1.35V</span>
+                            </div>
+                            <div class="ram-model-price">≈ 320 zł</div>
+                            <div class="ram-model-desc">
+                                Niski profil, kompatybilny z większością chłodzeń CPU.
+                            </div>
+                            <a href="#" class="ram-model-more">Zobacz szczegóły</a>
+                        </div>
+                        
+                        <div class="ram-model-card">
+                            <div class="ram-model-header">
+                                <h3>G.Skill Ripjaws V 32GB</h3>
+                                <div class="ram-config">2x16GB</div>
+                            </div>
+                            <div class="ram-model-specs">
+                                <span class="spec"><i class="fas fa-tachometer-alt"></i> 3600 MHz</span>
+                                <span class="spec"><i class="fas fa-clock"></i> CL16</span>
+                                <span class="spec"><i class="fas fa-bolt"></i> 1.35V</span>
+                            </div>
+                            <div class="ram-model-price">≈ 450 zł</div>
+                            <div class="ram-model-desc">
+                                Doskonały wybór do gaming PC. Wysoka wydajność, dobra cena.
+                            </div>
+                            <a href="#" class="ram-model-more">Zobacz szczegóły</a>
+                        </div>
+                        
+                        <div class="ram-model-card">
+                            <div class="ram-model-header">
+                                <h3>Team Group T-Force Delta 32GB</h3>
+                                <div class="ram-config">2x16GB</div>
+                            </div>
+                            <div class="ram-model-specs">
+                                <span class="spec"><i class="fas fa-tachometer-alt"></i> 3200 MHz</span>
+                                <span class="spec"><i class="fas fa-clock"></i> CL16</span>
+                                <span class="spec"><i class="fas fa-bolt"></i> 1.35V</span>
+                            </div>
+                            <div class="ram-model-price">≈ 420 zł</div>
+                            <div class="ram-model-desc">
+                                Estetyczne RGB podświetlenie. XMP 2.0 z jednym kliknięciem.
+                            </div>
+                            <a href="#" class="ram-model-more">Zobacz szczegóły</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Świat Komputerów</h3>
+                    <p>Portal dla entuzjastów technologii i komputerów.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Komponenty</h3>
+                    <ul>
+                        <li><a href="procesory.html">Procesory</a></li>
+                        <li><a href="pamiec-ram.html" class="active">RAM</a></li>
+                        <li><a href="dyski.html">Dyski</a></li>
+                        <li><a href="plyty-glowne.html">Płyty Główne</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Pozostałe podstrony</h3>
+                    <ul>
+                        <li><a href="gaming.html">Gaming</a></li>
+                        <li><a href="top-produkty.html">Top Produkty</a></li>
+                        <li><a href="historia.html">Historia komputerów</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p><i class="fas fa-envelope"></i> kontakt@swiatkomputerow.pl</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Świat Komputerów. Wszelkie prawa zastrzeżone.</p>
+                <p>Odwiedzin: <span id="visit-counter">0</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/pamiec-ram.js"></script>
+</body>
+</html>

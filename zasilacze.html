@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zasilacze - Świat Komputerów</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/zasilacze.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/Designer (11).png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <h1>Zasilacze</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Strona Główna</a></li>
+                    <li><a href="komponenty.html"><i class="fas fa-microchip"></i> Komponenty</a></li>
+                    <li><a href="procesory.html"><i class="fas fa-microchip"></i> Procesory</a></li>
+                    <li><a href="zasilacze.html" class="active"><i class="fas fa-bolt"></i> Zasilacze</a></li>
+                    <li><a href="plyty-glowne.html"><i class="fas fa-server"></i> Płyty Główne</a></li>
+                    <li><a href="gaming.html"><i class="fas fa-gamepad"></i> Gaming</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h2>Zasilacze Komputerowe (PSU)</h2>
+            <p>Serce systemu - wybierz odpowiedni zasilacz dla stabilnej pracy komputera</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="psu-intro">
+            <h2>Dlaczego zasilacz jest ważny?</h2>
+            <p>Zasilacz to jeden z najważniejszych komponentów komputera. Dostarcza stabilną energię do wszystkich podzespołów, a jego jakość decyduje o stabilności i żywotności całego systemu.</p>
+        </section>
+
+        <section class="psu-calculator">
+            <h2>Kalkulator mocy zasilacza</h2>
+            <p>Oblicz ile mocy potrzebuje Twój komputer</p>
+            
+            <div class="calculator-container">
+                <div class="calculator-inputs">
+                    <div class="calc-component">
+                        <label for="cpu-power">Procesor (CPU):</label>
+                        <select id="cpu-power">
+                            <option value="65">Intel Core i3 / AMD Ryzen 3 (65W)</option>
+                            <option value="95">Intel Core i5 / AMD Ryzen 5 (95W)</option>
+                            <option value="125" selected>Intel Core i7 / AMD Ryzen 7 (125W)</option>
+                            <option value="150">Intel Core i9 / AMD Ryzen 9 (150W)</option>
+                            <option value="250">Intel Core i9 Extreme / AMD Threadripper (250W)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="calc-component">
+                        <label for="gpu-power">Karta graficzna (GPU):</label>
+                        <select id="gpu-power">
+                            <option value="75">Zintegrowana / GTX 1050 (75W)</option>
+                            <option value="120">GTX 1660 / RX 5500 (120W)</option>
+                            <option value="180" selected>RTX 3060 / RX 6600 XT (180W)</option>
+                            <option value="250">RTX 4070 / RX 6800 (250W)</option>
+                            <option value="320">RTX 4080 / RX 7900 XT (320W)</option>
+                            <option value="450">RTX 4090 / RX 7900 XTX (450W)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="calc-component">
+                        <label for="ram-count">Liczba modułów RAM:</label>
+                        <input type="range" id="ram-count" min="1" max="8" value="2">
+                        <span id="ram-value">2 moduły</span>
+                    </div>
+                    
+                    <div class="calc-component">
+                        <label for="ssd-count">Liczba dysków SSD:</label>
+                        <input type="range" id="ssd-count" min="1" max="6" value="2">
+                        <span id="ssd-value">2 dyski</span>
+                    </div>
+                    
+                    <div class="calc-component">
+                        <label for="hdd-count">Liczba dysków HDD:</label>
+                        <input type="range" id="hdd-count" min="0" max="4" value="1">
+                        <span id="hdd-value">1 dysk</span>
+                    </div>
+                    
+                    <div class="calc-component">
+                        <label for="fans-count">Liczba wentylatorów:</label>
+                        <input type="range" id="fans-count" min="2" max="10" value="4">
+                        <span id="fans-value">4 wentylatory</span>
+                    </div>
+                    
+                    <div class="calc-component">
+                        <label>
+                            <input type="checkbox" id="overclock" checked>
+                            Planujesz overclocking?
+                        </label>
+                    </div>
+                    
+                    <button id="calculate-power" class="btn-calc">
+                        <i class="fas fa-calculator"></i> Oblicz potrzebną moc
+                    </button>
+                </div>
+                
+                <div class="calculator-result">
+                    <div class="result-card">
+                        <h3>Wynik obliczeń</h3>
+                        <div class="power-result">
+                            <div class="power-value">0 W</div>
+                            <div class="power-label">Szacowane zapotrzebowanie</div>
+                        </div>
+                        <div class="recommendation">
+                            <h4>Rekomendowana moc zasilacza:</h4>
+                            <div class="rec-value">0 W</div>
+                            <p class="rec-note">Zalecamy zasilacz o 20-30% większej mocy dla lepszej wydajności i żywotności.</p>
+                        </div>
+                        <div class="efficiency-info">
+                            <h4>Certyfikat 80 PLUS:</h4>
+                            <div class="efficiency-badges">
+                                <div class="efficiency-badge" data-level="bronze">
+                                    <span>BRONZE</span>
+                                    <small>85% sprawności</small>
+                                </div>
+                                <div class="efficiency-badge active" data-level="gold">
+                                    <span>GOLD</span>
+                                    <small>90% sprawności</small>
+                                </div>
+                                <div class="efficiency-badge" data-level="platinum">
+                                    <span>PLATINUM</span>
+                                    <small>92% sprawności</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="psu-guide">
+            <h2>Poradnik wyboru zasilacza</h2>
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <div class="guide-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Moc (Wattage)</h3>
+                    <p>Wybierz zasilacz z zapasem mocy 20-30%. Zbyt słaby PSU może powodować niestabilność systemu.</p>
+                    <ul>
+                        <li>Office PC: 400-500W</li>
+                        <li>Gaming PC: 600-750W</li>
+                        <li>High-End Gaming: 850-1000W</li>
+                        <li>Workstation: 1000W+</li>
+                    </ul>
+                </div>
+                
+                <div class="guide-card">
+                    <div class="guide-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certyfikat 80 PLUS</h3>
+                    <p>Określa sprawność energetyczną. Im wyższy certyfikat, tym mniejsze straty energii i niższe rachunki.</p>
+                    <div class="efficiency-levels">
+                        <span class="level bronze">80+ Bronze: 85%</span>
+                        <span class="level silver">80+ Silver: 88%</span>
+                        <span class="level gold">80+ Gold: 90%</span>
+                        <span class="level platinum">80+ Platinum: 92%</span>
+                        <span class="level titanium">80+ Titanium: 94%</span>
+                    </div>
+                </div>
+                
+                <div class="guide-card">
+                    <div class="guide-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Zabezpieczenia</h3>
+                    <p>Dobre zasilacze mają multiple zabezpieczenia chroniące komponenty przed uszkodzeniem.</p>
+                    <ul>
+                        <li>OVP (Over Voltage Protection)</li>
+                        <li>UVP (Under Voltage Protection)</li>
+                        <li>OCP (Over Current Protection)</li>
+                        <li>OPP (Over Power Protection)</li>
+                        <li>SCP (Short Circuit Protection)</li>
+                    </ul>
+                </div>
+                
+                <div class="guide-card">
+                    <div class="guide-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>Złącza i kable</h3>
+                    <p>Upewnij się, że zasilacz ma odpowiednie złącza dla twoich komponentów.</p>
+                    <ul>
+                        <li>24-pin ATX (płyta główna)</li>
+                        <li>8-pin CPU (procesor)</li>
+                        <li>6+2 pin PCIe (karta graficzna)</li>
+                        <li>SATA (dyski, napędy)</li>
+                        <li>Molex (starsze urządzenia)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="psu-recommendations">
+            <h2>Rekomendowane modele zasilaczy</h2>
+            <div class="recommendation-tabs">
+                <div class="rec-tab-buttons">
+                    <button class="rec-tab-btn active" data-category="budget">Budżetowe</button>
+                    <button class="rec-tab-btn" data-category="midrange">Średnia półka</button>
+                    <button class="rec-tab-btn" data-category="premium">Premium</button>
+                    <button class="rec-tab-btn" data-category="sfx">SFX (Mini-ITX)</button>
+                </div>
+                
+                <div class="rec-tab-content active" id="rec-budget">
+                    <div class="psu-models-grid">
+                        <!-- Modele budżetowe -->
+                        <div class="psu-model-card">
+                            <div class="psu-model-header">
+                                <h3>be quiet! System Power 10</h3>
+                                <div class="psu-wattage">650W</div>
+                            </div>
+                            <div class="psu-model-specs">
+                                <span class="spec"><i class="fas fa-certificate"></i> 80+ Bronze</span>
+                                <span class="spec"><i class="fas fa-fan"></i> 120mm wentylator</span>
+                                <span class="spec"><i class="fas fa-plug"></i> Półmodularny</span>
+                            </div>
+                            <div class="psu-model-price">≈ 320 zł</div>
+                            <div class="psu-model-desc">
+                                Solidny zasilacz do budżetowych zestawów gamingowych i biurowych.
+                            </div>
+                            <a href="#" class="psu-model-more">Zobacz szczegóły</a>
+                        </div>
+                        
+                        <div class="psu-model-card">
+                            <div class="psu-model-header">
+                                <h3>Corsair CV Series</h3>
+                                <div class="psu-wattage">750W</div>
+                            </div>
+                            <div class="psu-model-specs">
+                                <span class="spec"><i class="fas fa-certificate"></i> 80+ Bronze</span>
+                                <span class="spec"><i class="fas fa-fan"></i> 120mm wentylator</span>
+                                <span class="spec"><i class="fas fa-plug"></i> Niemodularny</span>
+                            </div>
+                            <div class="psu-model-price">≈ 380 zł</div>
+                            <div class="psu-model-desc">
+                                Dobrej jakości zasilacz z 5-letnią gwarancją. Idealny do średniej klasy GPU.
+                            </div>
+                            <a href="#" class="psu-model-more">Zobacz szczegóły</a>
+                        </div>
+                        
+                        <div class="psu-model-card">
+                            <div class="psu-model-header">
+                                <h3>SilentiumPC Vero L3</h3>
+                                <div class="psu-wattage">600W</div>
+                            </div>
+                            <div class="psu-model-specs">
+                                <span class="spec"><i class="fas fa-certificate"></i> 80+ Bronze</span>
+                                <span class="spec"><i class="fas fa-fan"></i> 120mm wentylator</span>
+                                <span class="spec"><i class="fas fa-plug"></i> Niemodularny</span>
+                            </div>
+                            <div class="psu-model-price">≈ 290 zł</div>
+                            <div class="psu-model-desc">
+                                Polska marka oferująca dobry stosunek jakości do ceny. Ciche działanie.
+                            </div>
+                            <a href="#" class="psu-model-more">Zobacz szczegóły</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="rec-tab-content" id="rec-midrange">
+                    <div class="psu-models-grid">
+                        <!-- Modele średniej półki -->
+                        <div class="psu-model-card">
+                            <div class="psu-model-header">
+                                <h3>Corsair RM750x</h3>
+                                <div class="psu-wattage">750W</div>
+                            </div>
+                            <div class="psu-model-specs">
+                                <span class="spec"><i class="fas fa-certificate"></i> 80+ Gold</span>
+                                <span class="spec"><i class="fas fa-fan"></i> 135mm wentylator</span>
+                                <span class="spec"><i class="fas fa-plug"></i> Pełni modularny</span>
+                            </div>
+                            <div class="psu-model-price">≈ 550 zł</div>
+                            <div class="psu-model-desc">
+                                Kultowy zasilacz wśród entuzjastów. Doskonała jakość i 10-letnia gwarancja.
+                            </div>
+                            <a href="#" class="psu-model-more">Zobacz szczegóły</a>
+                        </div>
+                        
+                        <div class="psu-model-card">
+                            <div class="psu-model-header">
+                                <h3>be quiet! Straight Power 11</h3>
+                                <div class="psu-wattage>850W</div>
+                            </div>
+                            <div class="psu-model-specs">
+                                <span class="spec"><i class="fas fa-certificate"></i> 80+ Gold</span>
+                                <span class="spec"><i class="fas fa-fan"></i> 135mm wentylator</span>
+                                <span class="spec"><i class="fas fa-plug"></i> Pełni modularny</span>
+                            </div>
+                            <div class="psu-model-price">≈ 620 zł</div>
+                            <div class="psu-model-desc">
+                                Niezwykle cichy i wydajny. Idealny do high-end systemów gamingowych.
+                            </div>
+                            <a href="#" class="psu-model-more">Zobacz szczegóły</a>
+                        </div>
+                        
+                        <div class="psu-model-card">
+                            <div class="psu-model-header">
+                                <h3>Seasonic Focus GX</h3>
+                                <div class="psu-wattage">850W</div>
+                            </div>
+                            <div class="psu-model-specs">
+                                <span class="spec"><i class="fas fa-certificate"></i> 80+ Gold</span>
+                                <span class="spec"><i class="fas fa-fan"></i> 120mm wentylator</span>
+                                <span class="spec"><i class="fas fa-plug"></i> Pełni modularny</span>
+                            </div>
+                            <div class="psu-model-price">≈ 600 zł</div>
+                            <div class="psu-model-desc">
+                                Jeden z najlepszych zasilaczy w swojej klasie. Doskonała stabilność napięć.
+                            </div>
+                            <a href="#" class="psu-model-more">Zobacz szczegóły</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Świat Komputerów</h3>
+                    <p>Portal dla entuzjastów technologii i komputerów.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Komponenty</h3>
+                    <ul>
+                        <li><a href="procesory.html">Procesory</a></li>
+                        <li><a href="zasilacze.html" class="active">Zasilacze</a></li>
+                        <li><a href="plyty-glowne.html">Płyty Główne</a></li>
+                        <li><a href="karty-graficzne.html">Karty Graficzne</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Pozostałe podstrony</h3>
+                    <ul>
+                        <li><a href="gaming.html">Gaming</a></li>
+                        <li><a href="top-produkty.html">Top Produkty</a></li>
+                        <li><a href="historia.html">Historia komputerów</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p><i class="fas fa-envelope"></i> kontakt@swiatkomputerow.pl</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Świat Komputerów. Wszelkie prawa zastrzeżone.</p>
+                <p>Odwiedzin: <span id="visit-counter">0</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/zasilacze.js"></script>
+</body>
+</html>

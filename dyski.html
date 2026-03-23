@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dyski Twarde - Świat Komputerów</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/dyski.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/Designer (11).png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-hdd"></i>
+                <h1>Dyski Twarde</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Strona Główna</a></li>
+                    <li><a href="komponenty.html"><i class="fas fa-microchip"></i> Komponenty</a></li>
+                    <li><a href="procesory.html"><i class="fas fa-microchip"></i> Procesory</a></li>
+                    <li><a href="pamiec-ram.html"><i class="fas fa-memory"></i> RAM</a></li>
+                    <li><a href="dyski.html" class="active"><i class="fas fa-hdd"></i> Dyski</a></li>
+                    <li><a href="plyty-glowne.html"><i class="fas fa-server"></i> Płyty Główne</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h2>Dyski Twarde i SSD</h2>
+            <p>Przechowywanie danych - od tradycyjnych HDD po superszybkie NVMe SSD</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="storage-intro">
+            <h2>Rodzaje dysków twardych</h2>
+            <p>Wybierz odpowiedni rodzaj dysku w zależności od potrzeb: pojemność HDD, szybkość SSD lub superszybkość NVMe.</p>
+        </section>
+
+        <section class="storage-calculator">
+            <h2>Kalkulator potrzebnej pojemności</h2>
+            <p>Oblicz ile miejsca potrzebujesz na dysku</p>
+            
+            <div class="calculator-container">
+                <div class="calculator-inputs">
+                    <div class="calc-component">
+                        <label for="storage-usage"><i class="fas fa-tasks"></i> Przeznaczenie:</label>
+                        <select id="storage-usage">
+                            <option value="basic">Podstawowe (biuro, internet)</option>
+                            <option value="gaming" selected>Gaming</option>
+                            <option value="creative">Kreatywność (grafika, wideo)</option>
+                            <option value="workstation">Stacja robocza</option>
+                            <option value="server">Serwer/NAS</option>
+                        </select>
+                    </div>
+                    
+                    <div class="calc-component">
+                        <label><i class="fas fa-gamepad"></i> Gry komputerowe:</label>
+                        <div class="games-checklist">
+                            <label><input type="checkbox" name="game" value="indie" checked> Gry indie (1-10 GB)</label>
+                            <label><input type="checkbox" name="game" value="aaa" checked> Gry AAA (50-100 GB)</label>
+                            <label><input type="checkbox" name="game" value="modern"> Nowoczesne gry (100-200 GB)</label>
+                            <label><input type="checkbox" name="game" value="library"> Duża biblioteka gier</label>
+                        </div>
+                    </div>
+                    
+                    <div class="calc-component">
+                        <label><i class="fas fa-photo-video"></i> Multimedia:</label>
+                        <div class="media-checklist">
+                            <label><input type="checkbox" name="media" value="photos" checked> Zdjęcia (do 50 GB)</label>
+                            <label><input type="checkbox" name="media" value="music"> Muzyka (do 100 GB)</label>
+                            <label><input type="checkbox" name="media" value="movies" checked> Filmy (do 500 GB)</label>
+                            <label><input type="checkbox" name="media" value="4k"> Filmy 4K (1 TB+)</label>
+                        </div>
+                    </div>
+                    
+                    <div class="calc-component">
+                        <label for="os-type"><i class="fas fa-desktop"></i> System operacyjny:</label>
+                        <select id="os-type">
+                            <option value="windows" selected>Windows 10/11 (64 GB)</option>
+                            <option value="linux">Linux (20 GB)</option>
+                            <option value="dual">Dual-boot (100 GB)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="calc-component">
+                        <label for="future-proof"><i class="fas fa-calendar-plus"></i> Future-proof (lata):</label>
+                        <input type="range" id="future-proof" min="1" max="5" value="3">
+                        <span id="future-proof-value">3 lata</span>
+                    </div>
+                    
+                    <button id="calculate-storage" class="btn-calc">
+                        <i class="fas fa-calculator"></i> Oblicz potrzebną pojemność
+                    </button>
+                </div>
+                
+                <div class="calculator-result">
+                    <div class="result-card">
+                        <h3>Rekomendacja pojemności</h3>
+                        <div class="storage-result">
+                            <div class="storage-value">1 TB</div>
+                            <div class="storage-label">Całkowita potrzebna pojemność</div>
+                        </div>
+                        <div class="configuration-recommendation">
+                            <h4>Rekomendowana konfiguracja:</h4>
+                            <div class="config-option">
+                                <div class="config-type">SSD NVMe</div>
+                                <div class="config-size">500 GB</div>
+                                <div class="config-desc">Na system i najważniejsze programy</div>
+                            </div>
+                            <div class="config-option">
+                                <div class="config-type">SSD SATA</div>
+                                <div class="config-size">1 TB</div>
+                                <div class="config-desc">Na gry i aplikacje</div>
+                            </div>
+                            <div class="config-option">
+                                <div class="config-type">HDD</div>
+                                <div class="config-size">2 TB</div>
+                                <div class="config-desc">Na archiwum i multimedia</div>
+                            </div>
+                        </div>
+                        <div class="performance-tip">
+                            <h5>⚡ Wskazówka wydajności:</h5>
+                            <p>Użyj SSD NVMe dla systemu, SSD SATA dla gier, HDD dla danych.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="storage-types">
+            <h2>Rodzaje nośników danych</h2>
+            <div class="types-comparison">
+                <div class="type-card hdd">
+                    <div class="type-header">
+                        <div class="type-icon">
+                            <i class="fas fa-hdd"></i>
+                        </div>
+                        <h3>HDD</h3>
+                        <div class="type-subtitle">Dysk twardy</div>
+                    </div>
+                    <div class="type-specs">
+                        <div class="spec">
+                            <span class="spec-label">Prędkość</span>
+                            <span class="spec-value">100-200 MB/s</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Pojemność</span>
+                            <span class="spec-value">1-18 TB</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Cena/GB</span>
+                            <span class="spec-value">~0.15 zł</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Wytrzymałość</span>
+                            <span class="spec-value">3-5 lat</span>
+                        </div>
+                    </div>
+                    <div class="type-pros-cons">
+                        <div class="pros">
+                            <h4>Zalety:</h4>
+                            <ul>
+                                <li>Niska cena za GB</li>
+                                <li>Duże pojemności</li>
+                                <li>Długi czas przechowywania</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>Wady:</h4>
+                            <ul>
+                                <li>Wolna prędkość</li>
+                                <li>Hałas i wibracje</li>
+                                <li>Wrażliwość na wstrząsy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="type-recommendation">
+                        <strong>Zalecane dla:</strong> Archiwum danych, backup, NAS
+                    </div>
+                </div>
+                
+                <div class="type-card ssd">
+                    <div class="type-header">
+                        <div class="type-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>SSD SATA</h3>
+                        <div class="type-subtitle">Dysk półprzewodnikowy</div>
+                    </div>
+                    <div class="type-specs">
+                        <div class="spec">
+                            <span class="spec-label">Prędkość</span>
+                            <span class="spec-value">500-550 MB/s</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Pojemność</span>
+                            <span class="spec-value">250 GB - 4 TB</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Cena/GB</span>
+                            <span class="spec-value">~0.30 zł</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Wytrzymałość</span>
+                            <span class="spec-value">5-10 lat</span>
+                        </div>
+                    </div>
+                    <div class="type-pros-cons">
+                        <div class="pros">
+                            <h4>Zalety:</h4>
+                            <ul>
+                                <li>Szybki start systemu</li>
+                                <li>Cichsza praca</li>
+                                <li>Odporność na wstrząsy</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>Wady:</h4>
+                            <ul>
+                                <li>Wyższa cena niż HDD</li>
+                                <li>Ograniczona liczba zapisów</li>
+                                <li>Mniejsze pojemności</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="type-recommendation">
+                        <strong>Zalecane dla:</strong> System operacyjny, gry, aplikacje
+                    </div>
+                </div>
+                
+                <div class="type-card nvme">
+                    <div class="type-header">
+                        <div class="type-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>NVMe SSD</h3>
+                        <div class="type-subtitle">Najszybszy SSD</div>
+                    </div>
+                    <div class="type-specs">
+                        <div class="spec">
+                            <span class="spec-label">Prędkość</span>
+                            <span class="spec-value">3000-7000 MB/s</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Pojemność</span>
+                            <span class="spec-value">500 GB - 4 TB</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Cena/GB</span>
+                            <span class="spec-value">~0.50 zł</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Wytrzymałość</span>
+                            <span class="spec-value">5-10 lat</span>
+                        </div>
+                    </div>
+                    <div class="type-pros-cons">
+                        <div class="pros">
+                            <h4>Zalety:</h4>
+                            <ul>
+                                <li>Ekstremalna prędkość</li>
+                                <li>Brak kabli</li>
+                                <li>Mały rozmiar M.2</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>Wady:</h4>
+                            <ul>
+                                <li>Wysoka cena</li>
+                                <li>Potrzebuje złącza M.2</li>
+                                <li>Może się grzać</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="type-recommendation">
+                        <strong>Zalecane dla:</strong> Profesjonalne aplikacje, gaming 4K, stacje robocze
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="storage-formats">
+            <h2>Formaty i złącza dysków</h2>
+            <div class="formats-grid">
+                <div class="format-card">
+                    <div class="format-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>SATA III</h3>
+                    <p>Standardowe złącze dla HDD i SSD 2.5". Maksymalna prędkość 600 MB/s.</p>
+                    <div class="format-compatibility">
+                        <span class="compat-tag">HDD 3.5"</span>
+                        <span class="compat-tag">SSD 2.5"</span>
+                    </div>
+                </div>
+                
+                <div class="format-card">
+                    <div class="format-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>M.2 SATA</h3>
+                    <p>Mały format, ale nadal interfejs SATA. Prędkość ograniczona do 600 MB/s.</p>
+                    <div class="format-compatibility">
+                        <span class="compat-tag">M.2 2280</span>
+                        <span class="compat-tag">Laptopy</span>
+                    </div>
+                </div>
+                
+                <div class="format-card">
+                    <div class="format-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>M.2 NVMe</h3>
+                    <p>PCIe x4, najszybsze dostępne dyski. Prędkość do 7000 MB/s.</p>
+                    <div class="format-compatibility">
+                        <span class="compat-tag">PCIe 3.0/4.0</span>
+                        <span class="compat-tag">M.2 2280</span>
+                    </div>
+                </div>
+                
+                <div class="format-card">
+                    <div class="format-icon">
+                        <i class="fas fa-expand-alt"></i>
+                    </div>
+                    <h3>U.2</h3>
+                    <p>Profesjonalne złącze dla serwerów i stacji roboczych. Duże pojemności.</p>
+                    <div class="format-compatibility">
+                        <span class="compat-tag">Enterprise</span>
+                        <span class="compat-tag">Serwery</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="storage-recommendations">
+            <h2>Rekomendowane modele dysków</h2>
+            <div class="recommendation-tabs">
+                <div class="rec-tab-buttons">
+                    <button class="rec-tab-btn active" data-category="budget">Budżetowe</button>
+                    <button class="rec-tab-btn" data-category="gaming">Gaming</button>
+                    <button class="rec-tab-btn" data-category="nvme">NVMe</button>
+                    <button class="rec-tab-btn" data-category="nas">NAS/Serwery</button>
+                </div>
+                
+                <div class="rec-tab-content active" id="rec-budget">
+                    <div class="storage-models-grid">
+                        <div class="storage-model-card">
+                            <div class="model-header">
+                                <h3>Seagate BarraCuda 2TB</h3>
+                                <div class="model-type">HDD</div>
+                            </div>
+                            <div class="model-specs">
+                                <span><i class="fas fa-hdd"></i> 7200 RPM</span>
+                                <span><i class="fas fa-tachometer-alt"></i> 210 MB/s</span>
+                                <span><i class="fas fa-sd-card"></i> 256 MB cache</span>
+                            </div>
+                            <div class="model-price">≈ 280 zł</div>
+                            <div class="model-desc">
+                                Solidny dysk HDD do przechowywania danych. 2 lata gwarancji.
+                            </div>
+                            <a href="#" class="model-more">Szczegóły</a>
+                        </div>
+                        
+                        <div class="storage-model-card">
+                            <div class="model-header">
+                                <h3>Kingston A400 480GB</h3>
+                                <div class="model-type">SSD SATA</div>
+                            </div>
+                            <div class="model-specs">
+                                <span><i class="fas fa-bolt"></i> 500 MB/s</span>
+                                <span><i class="fas fa-microchip"></i> TLC NAND</span>
+                                <span><i class="fas fa-shield-alt"></i> 3 lata GW</span>
+                            </div>
+                            <div class="model-price">≈ 150 zł</div>
+                            <div class="model-desc">
+                                Najtańszy SSD SATA do podstawowego użytku. Dobry na system.
+                            </div>
+                            <a href="#" class="model-more">Szczegóły</a>
+                        </div>
+                        
+                        <div class="storage-model-card">
+                            <div class="model-header">
+                                <h3>WD Blue SN570 500GB</h3>
+                                <div class="model-type">NVMe SSD</div>
+                            </div>
+                            <div class="model-specs">
+                                <span><i class="fas fa-rocket"></i> 3500 MB/s</span>
+                                <span><i class="fas fa-microchip"></i> TLC 3D NAND</span>
+                                <span><i class="fas fa-shield-alt"></i> 5 lat GW</span>
+                            </div>
+                            <div class="model-price">≈ 220 zł</div>
+                            <div class="model-desc">
+                                Podstawowy NVMe w rozsądnej cenie. PCIe 3.0 x4.
+                            </div>
+                            <a href="#" class="model-more">Szczegóły</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="rec-tab-content" id="rec-gaming">
+                    <div class="storage-models-grid">
+                        <div class="storage-model-card">
+                            <div class="model-header">
+                                <h3>Samsung 870 Evo 1TB</h3>
+                                <div class="model-type">SSD SATA</div>
+                            </div>
+                            <div class="model-specs">
+                                <span><i class="fas fa-bolt"></i> 560 MB/s</span>
+                                <span><i class="fas fa-microchip"></i> V-NAND 3-bit MLC</span>
+                                <span><i class="fas fa-shield-alt"></i> 5 lat GW</span>
+                            </div>
+                            <div class="model-price">≈ 350 zł</div>
+                            <div class="model-desc">
+                                Najlepszy SSD SATA na rynku. Doskonały do gier.
+                            </div>
+                            <a href="#" class="model-more">Szczegóły</a>
+                        </div>
+                        
+                        <div class="storage-model-card">
+                            <div class="model-header">
+                                <h3>WD Black SN770 1TB</h3>
+                                <div class="model-type">NVMe SSD</div>
+                            </div>
+                            <div class="model-specs">
+                                <span><i class="fas fa-rocket"></i> 5150 MB/s</span>
+                                <span><i class="fas fa-gamepad"></i> Gaming Mode</span>
+                                <span><i class="fas fa-shield-alt"></i> 5 lat GW</span>
+                            </div>
+                            <div class="model-price">≈ 350 zł</div>
+                            <div class="model-desc">
+                                Dedykowany gaming SSD z WD Black Dashboard.
+                            </div>
+                            <a href="#" class="model-more">Szczegóły</a>
+                        </div>
+                        
+                        <div class="storage-model-card">
+                            <div class="model-header">
+                                <h3>Crucial P5 Plus 2TB</h3>
+                                <div class="model-type">NVMe SSD</div>
+                            </div>
+                            <div class="model-specs">
+                                <span><i class="fas fa-rocket"></i> 6600 MB/s</span>
+                                <span><i class="fas fa-microchip"></i> PCIe 4.0</span>
+                                <span><i class="fas fa-shield-alt"></i> 5 lat GW</span>
+                            </div>
+                            <div class="model-price">≈ 650 zł</div>
+                            <div class="model-desc">
+                                Wysokowydajny NVMe PCIe 4.0 dla graczy i twórców.
+                            </div>
+                            <a href="#" class="model-more">Szczegóły</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="storage-speed-test">
+            <h2>Test prędkości dysków</h2>
+            <p>Porównaj teoretyczne prędkości różnych typów dysków</p>
+            <div class="speed-comparison-chart">
+                <div class="speed-category">
+                    <div class="category-name">HDD (7200 RPM)</div>
+                    <div class="speed-bar-container">
+                        <div class="speed-bar hdd-speed" style="width: 15%">
+                            <span class="speed-value">150 MB/s</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="speed-category">
+                    <div class="category-name">SSD SATA</div>
+                    <div class="speed-bar-container">
+                        <div class="speed-bar ssd-speed" style="width: 30%">
+                            <span class="speed-value">550 MB/s</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="speed-category">
+                    <div class="category-name">NVMe PCIe 3.0</div>
+                    <div class="speed-bar-container">
+                        <div class="speed-bar nvme3-speed" style="width: 60%">
+                            <span class="speed-value">3500 MB/s</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="speed-category">
+                    <div class="category-name">NVMe PCIe 4.0</div>
+                    <div class="speed-bar-container">
+                        <div class="speed-bar nvme4-speed" style="width: 100%">
+                            <span class="speed-value">7000 MB/s</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="chart-note">* Prędkości teoretyczne, rzeczywiste mogą się różnić</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Świat Komputerów</h3>
+                    <p>Portal dla entuzjastów technologii i komputerów.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Komponenty</h3>
+                    <ul>
+                        <li><a href="procesory.html">Procesory</a></li>
+                        <li><a href="pamiec-ram.html">RAM</a></li>
+                        <li><a href="dyski.html" class="active">Dyski</a></li>
+                        <li><a href="plyty-glowne.html">Płyty Główne</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Pozostałe podstrony</h3>
+                    <ul>
+                        <li><a href="gaming.html">Gaming</a></li>
+                        <li><a href="top-produkty.html">Top Produkty</a></li>
+                        <li><a href="historia.html">Historia komputerów</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p><i class="fas fa-envelope"></i> kontakt@swiatkomputerow.pl</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Świat Komputerów. Wszelkie prawa zastrzeżone.</p>
+                <p>Odwiedzin: <span id="visit-counter">0</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/dyski.js"></script>
+</body>
+</html>

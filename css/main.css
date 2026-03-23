@@ -1,0 +1,422 @@
+/* Reset i podstawowe style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Nagłówek */
+header {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    font-size: 2rem;
+    color: #4cc9f0;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+}
+
+/* Nawigacja */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-menu li a:hover, .nav-menu li a.active {
+    background-color: #4cc9f0;
+    color: #1a1a2e;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Stopka */
+footer {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    color: #4cc9f0;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #4cc9f0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #4cc9f0;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #1a1a2e;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dodajmy na koniec pliku main.css */
+
+/* Animacje dla kart */
+.feature-card, .product-card, .history-card, .component-card, .gaming-card {
+    opacity: 1; /* Domyślnie widoczne, JS zmienia na 0 */
+    transform: translateY(0); /* Domyślnie na miejscu, JS zmienia */
+}
+
+/* Płynne przewijanie dla wszystkich linków */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Styl dla rozwiniętej treści */
+.expandable-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.expandable-content.expanded {
+    max-height: 1000px; /* Wystarczająco duża wartość */
+}
+
+/* Responsywność dla animacji */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    .feature-card, .product-card, .history-card, .component-card, .gaming-card,
+    .gallery-item img {
+        transition: none !important;
+    }
+}
+
+/* DODATKOWE STYLE DLA ANIMACJI */
+
+/* Resetujemy transition dla animowanych kart */
+.animated-card {
+    transition: opacity 0.6s ease, transform 0.6s ease !important;
+}
+
+/* Domyślny styl dla wszystkich kart */
+.feature-card, .product-card, .history-card, 
+.component-card, .gaming-card, .info-card,
+.article-card, .tech-card {
+    opacity: 1; /* Domyślnie widoczne */
+    transform: translateY(0);
+    will-change: transform, opacity; /* Optymalizacja animacji */
+}
+
+/* Płynne przewijanie */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Klasy pomocnicze dla rozwijanej treści */
+.expandable-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.expandable-content.expanded {
+    max-height: 1000px;
+    transition: max-height 0.8s ease-in;
+}
+
+/* Efekt ładowania strony */
+@keyframes pageLoad {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body {
+    animation: pageLoad 0.5s ease-out;
+}
+
+/* Styl dla kart podczas animacji */
+.card-loading {
+    opacity: 0 !important;
+    transform: translateY(30px) !important;
+}
+
+/* DODATKOWE STYLE DLA UNIWERSALNEJ ANIMACJI KART */
+
+/* Reset dla animowanych elementów */
+.js-animated {
+    opacity: 1 !important; /* Nadpisane przez JS, ale backup */
+    transform: translateY(0) !important;
+}
+
+/* Płynne przejścia dla wszystkich potencjalnych kart */
+.feature-card, .product-card, .history-card, 
+.component-card, .gaming-card, .info-card,
+.article-card, .tech-card, .fact-card,
+.gallery-item, .auto-detected-card,
+.features-grid > div, .gallery-grid > div,
+.facts-grid > div, .history-timeline > div {
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Gwarantujemy, że po animacji karty są widoczne */
+.js-animated-complete {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Efekt hover dla kart */
+.feature-card:hover, .product-card:hover, .history-card:hover,
+.component-card:hover, .gaming-card:hover, .info-card:hover,
+.article-card:hover, .tech-card:hover, .fact-card:hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* Płynne przewijanie dla wszystkich stron */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px; /* Uwzględnij wysokość nagłówka */
+    }
+}
+
+/* Animacja dla sekcji */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Klasy pomocnicze do ręcznej animacji */
+.animate-on-scroll {
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+
+/* Globalne style dla lepszego UX */
+main section {
+    padding: 40px 0;
+}
+
+main section:nth-child(even) {
+    background-color: #f9fafc;
+}
+
+main section h2 {
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+main section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #4cc9f0;
+}
+
+main section:nth-child(even) h2:after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Dodatkowe style dla animacji */
+
+@keyframes floatUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-float-up {
+    animation: floatUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Smooth transitions for all interactive elements */
+button, 
+input, 
+select, 
+.answer-option,
+.category-card,
+.tech-card,
+.expert-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Better focus styles for accessibility */
+button:focus,
+input:focus,
+select:focus,
+a:focus {
+    outline: 2px solid #4cc9f0;
+    outline-offset: 2px;
+}
+
+/* Print styles for porady page */
+@media print {
+    .advice-accordion .accordion-content {
+        max-height: none !important;
+        display: block !important;
+    }
+    
+    .accordion-item {
+        break-inside: avoid;
+    }
+    
+    .quiz-container,
+    .carousel-controls,
+    .simulation-controls {
+        display: none !important;
+    }
+}

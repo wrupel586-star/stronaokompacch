@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Świat Komputerów - Strona Główna</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/Designer (11).png">
+    <script src="js/init.js" defer></script>
+</head>
+<body>
+    <!-- Nagłówek z nawigacją -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-desktop"></i>
+                <h1>Świat Komputerów</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Strona Główna</a></li>
+                    <li><a href="historia.html"><i class="fas fa-history"></i> Historia</a></li>
+                    <li><a href="komponenty.html"><i class="fas fa-microchip"></i> Komponenty</a></li>
+                    <li><a href="gaming.html"><i class="fas fa-gamepad"></i> Gaming</a></li>
+                    <li><a href="top-produkty.html"><i class="fas fa-trophy"></i> Top Produkty</a></li>
+                    <li><a href="galeria.html"><i class="fas fa-images"></i> Galeria</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sekcja hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Witaj w świecie technologii</h2>
+                <p>Odkryj fascynujący świat komputerów, komponentów i nowoczesnych technologii. Znajdziesz tu wszystko od historii komputerów po najnowsze trendy.</p>
+                <a href="#main-content" class="btn">Dowiedz się więcej</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-computer.jpg" alt="Nowoczesny komputer">
+            </div>
+        </div>
+    </section>
+
+    <!-- Główna zawartość -->
+    <main class="container" id="main-content">
+        <section class="welcome">
+            <h2>O naszej stronie</h2>
+            <p>Strona "Świat Komputerów" to kompendium wiedzy dla wszystkich entuzjastów technologii. Niezależnie od tego, czy jesteś początkującym użytkownikiem, graczem, czy profesjonalistą, znajdziesz tu coś dla siebie.</p>
+        </section>
+
+        <section class="features">
+            <h2>Co znajdziesz na naszej stronie?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>Historia komputerów</h3>
+                    <p>Poznaj ewolucję komputerów od maszyn zajmujących całe pomieszczenia po dzisiejsze ultrabooki.</p>
+                    <a href="historia.html" class="feature-link">Czytaj więcej</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Komponenty PC</h3>
+                    <p>Dowiedz się wszystkiego o podzespołach komputerowych i naucz się samodzielnie składać swój wymarzony PC.</p>
+                    <a href="komponenty.html" class="feature-link">Czytaj więcej</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Gaming</h3>
+                    <p>Świat komputerów gamingowych, najlepszych konfiguracji do gier i sprzętu peryferyjnego dla graczy.</p>
+                    <a href="gaming.html" class="feature-link">Czytaj więcej</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Przyszłość technologii</h3>
+                    <p>Poznaj najnowsze trendy i technologie, które kształtują przyszłość świata komputerów.</p>
+                    <a href="przyszlosc.html" class="feature-link">Czytaj więcej</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-preview">
+            <h2>Galeria sprzętu komputerowego</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/pc-setup1.jpg" alt="Nowoczesne stanowisko komputerowe">
+                    <div class="gallery-caption">Nowoczesne stanowisko komputerowe</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gaming-pc.jpg" alt="Komputer gamingowy">
+                    <div class="gallery-caption">Komputer gamingowy z podświetleniem RGB</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/laptop.jpg" alt="Nowoczesny laptop">
+                    <div class="gallery-caption">Ultrabook dla profesjonalistów</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/components.jpg" alt="Podzespoły komputerowe">
+                    <div class="gallery-caption">Podzespoły do samodzielnego montażu</div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="galeria.html" class="btn">Zobacz całą galerię</a>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <h2>Bądź na bieżąco</h2>
+            <p>Zapisz się do naszego newslettera, aby otrzymywać najnowsze informacje ze świata technologii.</p>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Twój adres e-mail" required>
+                <button type="submit" class="btn">Zapisz się</button>
+            </form>
+            <p class="newsletter-info">Obiecujemy nie spamować!</p>
+        </section>
+    </main>
+
+    <!-- Stopka -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Świat Komputerów</h3>
+                    <p>Portal dla entuzjastów technologii i komputerów. Znajdziesz tu aktualności, porady i inspiracje ze świata IT.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Mapa strony</h3>
+                    <ul>
+                        <li><a href="index.html">Strona główna</a></li>
+                        <li><a href="historia.html">Historia komputerów</a></li>
+                        <li><a href="komponenty.html">Komponenty PC</a></li>
+                        <li><a href="gaming.html">Gaming</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Pozostałe podstrony</h3>
+                    <ul>
+                        <li><a href="procesory.html">Procesory</a></li>
+                        <li><a href="karty-graficzne.html">Karty graficzne</a></li>
+                        <li><a href="przyszlosc.html">Przyszłość technologii</a></li>
+                        <li><a href="porady.html">Porady</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p><i class="fas fa-envelope"></i> kontakt@swiatkomputerow.pl</p>
+                    <p><i class="fas fa-phone"></i> +48 123 456 789</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Świat Komputerów. Wszelkie prawa zastrzeżone.</p>
+                <p>Odwiedzin: <span id="visit-counter">0</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/init.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

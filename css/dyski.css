@@ -1,0 +1,860 @@
+/* Styl dla strony dyski.html */
+
+/* Storage intro */
+.storage-intro {
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 30px;
+}
+
+.storage-intro h2 {
+    font-size: 2.2rem;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+}
+
+.storage-intro p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Storage Calculator */
+.storage-calculator {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 50px;
+    border-radius: 15px;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.storage-calculator h2 {
+    text-align: center;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.storage-calculator > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.calculator-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.calculator-inputs {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.calc-component {
+    margin-bottom: 25px;
+}
+
+.calc-component label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #1a1a2e;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.calc-component label i {
+    color: #4cc9f0;
+}
+
+.calc-component select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+    transition: border-color 0.3s;
+}
+
+.calc-component select:focus {
+    border-color: #4cc9f0;
+    outline: none;
+}
+
+.games-checklist,
+.media-checklist {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.games-checklist label,
+.media-checklist label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.games-checklist label:hover,
+.media-checklist label:hover {
+    background: rgba(76, 201, 240, 0.1);
+}
+
+.games-checklist input[type="checkbox"],
+.media-checklist input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #4cc9f0;
+}
+
+.calc-component input[type="range"] {
+    width: 100%;
+    margin: 15px 0;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    outline: none;
+}
+
+.calc-component input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4cc9f0;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+#future-proof-value {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    color: #4cc9f0;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.btn-calc {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #4cc9f0, #4361ee);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-calc:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(76, 201, 240, 0.3);
+}
+
+.calculator-result {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.result-card {
+    text-align: center;
+}
+
+.result-card h3 {
+    color: #1a1a2e;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+.storage-result {
+    background: linear-gradient(135deg, #4cc9f0, #4361ee);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.storage-value {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.storage-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.configuration-recommendation {
+    margin-bottom: 30px;
+}
+
+.configuration-recommendation h4 {
+    color: #1a1a2e;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.config-option {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 4px solid #4cc9f0;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 15px;
+    align-items: center;
+}
+
+.config-type {
+    font-weight: bold;
+    color: #1a1a2e;
+    font-size: 1.1rem;
+}
+
+.config-size {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4cc9f0;
+}
+
+.config-desc {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.performance-tip {
+    background: #e8f5e9;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #4caf50;
+    text-align: left;
+}
+
+.performance-tip h5 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.performance-tip p {
+    color: #2e7d32;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* Storage Types */
+.storage-types {
+    margin-bottom: 60px;
+}
+
+.storage-types h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a1a2e;
+    margin-bottom: 40px;
+}
+
+.types-comparison {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.type-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.type-card:hover {
+    transform: translateY(-10px);
+}
+
+.type-card.hdd {
+    border-top: 5px solid #6c757d;
+}
+
+.type-card.ssd {
+    border-top: 5px solid #4cc9f0;
+}
+
+.type-card.nvme {
+    border-top: 5px solid #4361ee;
+}
+
+.type-header {
+    padding: 30px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.type-card.hdd .type-header {
+    background: linear-gradient(135deg, #6c757d, #495057);
+}
+
+.type-card.ssd .type-header {
+    background: linear-gradient(135deg, #4cc9f0, #3aa8cc);
+}
+
+.type-card.nvme .type-header {
+    background: linear-gradient(135deg, #4361ee, #3a56d4);
+}
+
+.type-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 2rem;
+}
+
+.type-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.type-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.type-specs {
+    padding: 25px;
+}
+
+.spec {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.spec:last-child {
+    border-bottom: none;
+}
+
+.spec-label {
+    color: #666;
+    font-weight: 600;
+}
+
+.spec-value {
+    color: #1a1a2e;
+    font-weight: bold;
+}
+
+.type-pros-cons {
+    padding: 0 25px 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.pros h4,
+.cons h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid;
+}
+
+.pros h4 {
+    color: #28a745;
+    border-bottom-color: #28a745;
+}
+
+.cons h4 {
+    color: #dc3545;
+    border-bottom-color: #dc3545;
+}
+
+.pros ul,
+.cons ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.9rem;
+}
+
+.pros li {
+    padding: 5px 0;
+    padding-left: 20px;
+    position: relative;
+    color: #28a745;
+}
+
+.pros li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.cons li {
+    padding: 5px 0;
+    padding-left: 20px;
+    position: relative;
+    color: #dc3545;
+}
+
+.cons li:before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.type-recommendation {
+    padding: 20px 25px;
+    background: #f8f9fa;
+    border-top: 2px solid #e9ecef;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.type-recommendation strong {
+    color: #1a1a2e;
+}
+
+/* Storage Formats */
+.storage-formats {
+    margin-bottom: 60px;
+}
+
+.storage-formats h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a1a2e;
+    margin-bottom: 40px;
+}
+
+.formats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.format-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.format-card:hover {
+    transform: translateY(-5px);
+}
+
+.format-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #4cc9f0, #4361ee);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2rem;
+    color: white;
+}
+
+.format-card h3 {
+    color: #1a1a2e;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.format-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.format-compatibility {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.compat-tag {
+    padding: 5px 12px;
+    background: #f0f8ff;
+    color: #4cc9f0;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Storage Recommendations */
+.storage-recommendations {
+    margin-bottom: 60px;
+}
+
+.storage-recommendations h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a1a2e;
+    margin-bottom: 40px;
+}
+
+.recommendation-tabs {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.rec-tab-buttons {
+    display: flex;
+    background: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+    overflow-x: auto;
+}
+
+.rec-tab-btn {
+    padding: 18px 30px;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+    position: relative;
+}
+
+.rec-tab-btn:hover {
+    color: #4cc9f0;
+    background: rgba(76, 201, 240, 0.05);
+}
+
+.rec-tab-btn.active {
+    color: #4cc9f0;
+    background: white;
+}
+
+.rec-tab-btn.active:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #4cc9f0;
+}
+
+.rec-tab-content {
+    padding: 30px;
+    display: none;
+}
+
+.rec-tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.storage-models-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.storage-model-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    border: 1px solid #eee;
+}
+
+.storage-model-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.model-header {
+    padding: 25px;
+    background: linear-gradient(135deg, #4cc9f0, #4361ee);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.model-header h3 {
+    font-size: 1.3rem;
+    margin: 0;
+    line-height: 1.4;
+    flex: 1;
+}
+
+.model-type {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.model-specs {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.model-specs span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.model-specs i {
+    color: #4cc9f0;
+    width: 20px;
+    text-align: center;
+}
+
+.model-price {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #4cc9f0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-top: 2px solid #e9ecef;
+}
+
+.model-desc {
+    padding: 0 20px 20px;
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.model-more {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background: #4cc9f0;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.model-more:hover {
+    background: #3aa8cc;
+}
+
+/* Storage Speed Test */
+.storage-speed-test {
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.storage-speed-test h2 {
+    text-align: center;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.storage-speed-test > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.speed-comparison-chart {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.speed-category {
+    margin-bottom: 25px;
+}
+
+.category-name {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1a1a2e;
+    font-size: 1.1rem;
+}
+
+.speed-bar-container {
+    height: 40px;
+    background: #e9ecef;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.speed-bar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    color: white;
+    font-weight: bold;
+    min-width: 100px;
+    transition: width 1.5s ease-out;
+    width: 0%;
+}
+
+.hdd-speed { background: linear-gradient(90deg, #6c757d, #495057); }
+.ssd-speed { background: linear-gradient(90deg, #4cc9f0, #3aa8cc); }
+.nvme3-speed { background: linear-gradient(90deg, #4361ee, #3a56d4); }
+.nvme4-speed { background: linear-gradient(90deg, #7209b7, #560bad); }
+
+.speed-value {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.chart-note {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Responsywność */
+@media (max-width: 992px) {
+    .calculator-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .types-comparison {
+        grid-template-columns: 1fr;
+    }
+    
+    .type-pros-cons {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .rec-tab-buttons {
+        flex-wrap: wrap;
+    }
+    
+    .rec-tab-btn {
+        flex: 1;
+        min-width: 120px;
+        padding: 15px;
+    }
+    
+    .config-option {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .storage-calculator {
+        padding: 30px 20px;
+    }
+    
+    .formats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .storage-models-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .calculator-inputs,
+    .calculator-result {
+        padding: 20px;
+    }
+    
+    .storage-value {
+        font-size: 2.8rem;
+    }
+    
+    .storage-speed-test {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .model-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .speed-bar {
+        padding-right: 10px;
+        font-size: 0.9rem;
+    }
+    
+    .category-name {
+        font-size: 1rem;
+    }
+}

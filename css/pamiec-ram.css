@@ -1,0 +1,703 @@
+/* Styl dla strony pamiec-ram.html */
+
+/* RAM intro */
+.ram-intro {
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 30px;
+}
+
+.ram-intro h2 {
+    font-size: 2.2rem;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+}
+
+.ram-intro p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* RAM Calculator */
+.ram-calculator {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 50px;
+    border-radius: 15px;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.ram-calculator h2 {
+    text-align: center;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.ram-calculator > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.calculator-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.calculator-inputs {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.calc-component {
+    margin-bottom: 25px;
+}
+
+.calc-component label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #1a1a2e;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.calc-component label i {
+    color: #4cc9f0;
+}
+
+.calc-component select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+    transition: border-color 0.3s;
+}
+
+.calc-component select:focus {
+    border-color: #4cc9f0;
+    outline: none;
+}
+
+.programs-checklist {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.programs-checklist label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.programs-checklist label:hover {
+    background: rgba(76, 201, 240, 0.1);
+}
+
+.programs-checklist input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #4cc9f0;
+}
+
+.btn-calc {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #4cc9f0, #4361ee);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-calc:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(76, 201, 240, 0.3);
+}
+
+.calculator-result {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.result-card {
+    text-align: center;
+}
+
+.result-card h3 {
+    color: #1a1a2e;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+.ram-result {
+    background: linear-gradient(135deg, #4cc9f0, #4361ee);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.ram-value {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ram-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.recommendation-details {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.recommendation-details h4 {
+    color: #1a1a2e;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.rec-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.rec-list li {
+    padding: 10px 0;
+    padding-left: 35px;
+    position: relative;
+    color: #555;
+    border-bottom: 1px dashed #eee;
+}
+
+.rec-list li:last-child {
+    border-bottom: none;
+}
+
+.rec-list li i {
+    position: absolute;
+    left: 0;
+    color: #4cc9f0;
+    font-size: 1.2rem;
+}
+
+.speed-recommendation {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.speed-recommendation h5 {
+    color: #1a1a2e;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.speed-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4cc9f0;
+    margin-bottom: 10px;
+}
+
+.speed-note {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.configuration-tip {
+    background: #fff3cd;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #ffc107;
+    text-align: left;
+}
+
+.configuration-tip h5 {
+    color: #856404;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.configuration-tip p {
+    color: #856404;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* RAM Types */
+.ram-types {
+    margin-bottom: 60px;
+}
+
+.ram-types h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a1a2e;
+    margin-bottom: 40px;
+}
+
+.types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.type-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    border-top: 5px solid #4cc9f0;
+}
+
+.type-card:hover {
+    transform: translateY(-10px);
+}
+
+.type-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.type-icon.ddr4 { background: linear-gradient(135deg, #36d1dc, #5b86e5); }
+.type-icon.ddr5 { background: linear-gradient(135deg, #f46b45, #eea849); }
+.type-icon.sodimm { background: linear-gradient(135deg, #834d9b, #d04ed6); }
+.type-icon.ecc { background: linear-gradient(135deg, #1d976c, #93f9b9); }
+
+.type-card h3 {
+    color: #1a1a2e;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.type-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.type-specs span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.type-specs i {
+    color: #4cc9f0;
+}
+
+.type-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.type-status {
+    display: inline-block;
+    padding: 5px 15px;
+    background: #f0f8ff;
+    color: #4cc9f0;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* RAM Timings */
+.ram-timings {
+    margin-bottom: 60px;
+}
+
+.ram-timings h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.ram-timings > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.timings-explanation {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.timing-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.timing-card:hover {
+    transform: translateY(-5px);
+}
+
+.timing-card h3 {
+    font-size: 2.5rem;
+    color: #4cc9f0;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.timing-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 15px;
+    padding: 8px;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.timing-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.timing-example {
+    padding: 12px;
+    background: #f0f8ff;
+    border-radius: 8px;
+    font-family: monospace;
+    color: #1a1a2e;
+    font-weight: 600;
+}
+
+.timings-table {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.timings-table h4 {
+    color: #1a1a2e;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.timings-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.timings-table th, .timings-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.timings-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #1a1a2e;
+}
+
+.timings-table tr:hover {
+    background: #f8f9fa;
+}
+
+/* RAM Recommendations */
+.ram-recommendations {
+    margin-bottom: 60px;
+}
+
+.ram-recommendations h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a1a2e;
+    margin-bottom: 40px;
+}
+
+.recommendation-tabs {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.rec-tab-buttons {
+    display: flex;
+    background: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+    overflow-x: auto;
+}
+
+.rec-tab-btn {
+    padding: 18px 30px;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+    position: relative;
+}
+
+.rec-tab-btn:hover {
+    color: #4cc9f0;
+    background: rgba(76, 201, 240, 0.05);
+}
+
+.rec-tab-btn.active {
+    color: #4cc9f0;
+    background: white;
+}
+
+.rec-tab-btn.active:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #4cc9f0;
+}
+
+.rec-tab-content {
+    padding: 30px;
+    display: none;
+}
+
+.rec-tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.ram-models-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.ram-model-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    border: 1px solid #eee;
+}
+
+.ram-model-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.ram-model-header {
+    padding: 25px;
+    background: linear-gradient(135deg, #4cc9f0, #4361ee);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ram-model-header h3 {
+    font-size: 1.3rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.ram-config {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.ram-model-specs {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.spec {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.spec i {
+    color: #4cc9f0;
+    width: 20px;
+    text-align: center;
+}
+
+.ram-model-price {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #4cc9f0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-top: 2px solid #e9ecef;
+}
+
+.ram-model-desc {
+    padding: 0 20px 20px;
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.ram-model-more {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background: #4cc9f0;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.ram-model-more:hover {
+    background: #3aa8cc;
+}
+
+/* Responsywność */
+@media (max-width: 992px) {
+    .calculator-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .types-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .timings-explanation {
+        grid-template-columns: 1fr;
+    }
+    
+    .rec-tab-buttons {
+        flex-wrap: wrap;
+    }
+    
+    .rec-tab-btn {
+        flex: 1;
+        min-width: 120px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ram-calculator {
+        padding: 30px 20px;
+    }
+    
+    .types-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ram-models-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .calculator-inputs,
+    .calculator-result {
+        padding: 20px;
+    }
+    
+    .ram-value {
+        font-size: 2.8rem;
+    }
+    
+    .programs-checklist {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .ram-model-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .timings-table {
+        padding: 20px 10px;
+        font-size: 0.9rem;
+    }
+    
+    .ram-config {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+}

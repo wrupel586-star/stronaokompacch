@@ -1,0 +1,665 @@
+/* Styl dla strony Top Produkty */
+
+/* Hero sekcja */
+.top-hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.top-hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #4cc9f0;
+}
+
+.top-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Kategorie rankingowe */
+.top-categories {
+    margin-bottom: 40px;
+}
+
+.top-categories h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1a1a2e;
+}
+
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.category-tab {
+    padding: 12px 24px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.category-tab:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.category-tab.active {
+    background-color: #4cc9f0;
+    color: white;
+    box-shadow: 0 4px 12px rgba(76, 201, 240, 0.3);
+}
+
+/* Tabele rankingowe */
+.ranking-table {
+    display: none;
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.ranking-table.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.table-header h3 {
+    color: #1a1a2e;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.table-header i {
+    color: #4cc9f0;
+}
+
+.table-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.table-filter span {
+    font-weight: 500;
+    color: #666;
+}
+
+.table-filter select {
+    padding: 8px 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.table-filter select:hover {
+    border-color: #4cc9f0;
+}
+
+/* Tabele produktów */
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 25px;
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.product-table thead {
+    background-color: #f8f9fa;
+}
+
+.product-table th {
+    padding: 15px 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #1a1a2e;
+    border-bottom: 2px solid #e0e0e0;
+    white-space: nowrap;
+}
+
+.product-table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s;
+}
+
+.product-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.product-table td {
+    padding: 15px 12px;
+    vertical-align: middle;
+}
+
+/* Wiersze z podium */
+.product-row.gold {
+    background-color: rgba(255, 215, 0, 0.05);
+}
+
+.product-row.silver {
+    background-color: rgba(192, 192, 192, 0.05);
+}
+
+.product-row.bronze {
+    background-color: rgba(205, 127, 50, 0.05);
+}
+
+/* Badge rankingowe */
+.rank-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.rank-badge.gold {
+    background-color: gold;
+    color: #333;
+}
+
+.rank-badge.silver {
+    background-color: silver;
+    color: #333;
+}
+
+.rank-badge.bronze {
+    background-color: #cd7f32;
+    color: white;
+}
+
+/* Kolumna z nazwą produktu */
+.product-name {
+    min-width: 200px;
+}
+
+.product-name strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.product-tag {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.gaming-tag { background-color: #ff6b6b; color: white; }
+.productivity-tag { background-color: #4ecdc4; color: white; }
+.hybrid-tag { background-color: #9b59b6; color: white; }
+.value-tag { background-color: #2ecc71; color: white; }
+.budget-tag { background-color: #f39c12; color: white; }
+.performance-tag { background-color: #e74c3c; color: white; }
+.premium-tag { background-color: #3498db; color: white; }
+.balanced-tag { background-color: #1abc9c; color: white; }
+
+/* Paski ocen */
+.score-bar {
+    background-color: #4cc9f0;
+    border-radius: 3px;
+    padding: 5px;
+    color: white;
+    font-size: 0.85rem;
+    text-align: center;
+    min-width: 50px;
+    position: relative;
+    transition: width 0.5s ease;
+}
+
+.score-bar span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Oceny */
+.rating {
+    font-weight: bold;
+    color: #1a1a2e;
+}
+
+.rating:before {
+    content: '★';
+    color: gold;
+    margin-right: 5px;
+}
+
+/* Marki */
+.brand-nvidia {
+    color: #76b900;
+    font-weight: 600;
+}
+
+.brand-amd {
+    color: #ed1c24;
+    font-weight: 600;
+}
+
+/* Ikony w tabelach */
+.yes {
+    color: #2ecc71;
+}
+
+.no {
+    color: #e74c3c;
+}
+
+/* Podsumowanie tabeli */
+.table-summary {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 25px;
+    border-left: 4px solid #4cc9f0;
+}
+
+.table-summary h4 {
+    color: #1a1a2e;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.summary-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.summary-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.summary-item i {
+    font-size: 1.2rem;
+    margin-top: 3px;
+}
+
+.summary-item i.gold {
+    color: gold;
+}
+
+.summary-item i.silver {
+    color: silver;
+}
+
+.summary-item i.bronze {
+    color: #cd7f32;
+}
+
+.summary-item strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.summary-item small {
+    color: #666;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+/* Sekcja porównania cen */
+.comparison-section {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.comparison-section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #1a1a2e;
+}
+
+.comparison-section p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Filtry cenowe */
+.price-comparison {
+    margin-bottom: 30px;
+}
+
+.price-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-group label {
+    font-weight: 500;
+    color: #333;
+}
+
+.filter-group select {
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: white;
+    min-width: 200px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.filter-group select:hover {
+    border-color: #4cc9f0;
+}
+
+/* Tabela porównania cen */
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.price-table th {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.price-table td {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.price-product {
+    min-width: 200px;
+}
+
+.price-product strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.price-product small {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.price-shop {
+    font-weight: 600;
+    text-align: center;
+}
+
+.price-shop.lowest {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.price-shop.highest {
+    color: #e74c3c;
+}
+
+.price-difference {
+    font-weight: 600;
+    text-align: center;
+}
+
+.price-difference.positive {
+    color: #2ecc71;
+}
+
+.price-difference.negative {
+    color: #e74c3c;
+}
+
+.price-link a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #4cc9f0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.price-link a:hover {
+    background-color: #1a1a2e;
+}
+
+/* Styl dla etykiet w tabeli cen */
+.price-label {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.best-price {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.good-price {
+    background-color: #f39c12;
+    color: white;
+}
+
+.high-price {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Responsywność */
+@media (max-width: 992px) {
+    .category-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .category-tab {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .table-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .summary-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-hero {
+        padding: 60px 0;
+    }
+    
+    .top-hero h2 {
+        font-size: 2rem;
+    }
+    
+    .price-filters {
+        flex-direction: column;
+    }
+    
+    .filter-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .filter-group select {
+        width: 100%;
+    }
+    
+    .product-table th,
+    .product-table td {
+        padding: 10px 8px;
+        font-size: 0.85rem;
+    }
+    
+    .rank-badge {
+        width: 25px;
+        height: 25px;
+        font-size: 0.8rem;
+    }
+    
+    .price-table th,
+    .price-table td {
+        padding: 10px 8px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .top-hero h2 {
+        font-size: 1.6rem;
+    }
+    
+    .top-hero p {
+        font-size: 1rem;
+    }
+    
+    .ranking-table,
+    .comparison-section {
+        padding: 15px;
+    }
+    
+    .product-table {
+        font-size: 0.8rem;
+    }
+    
+    .product-tag {
+        font-size: 0.7rem;
+    }
+    
+    .score-bar {
+        min-width: 40px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Sekcja metodologii */
+.methodology-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.methodology-item {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.methodology-item h3 {
+    color: #1a1a2e;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.methodology-item h3 i {
+    color: #4cc9f0;
+}
+
+.methodology-item p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.methodology-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.methodology-item ul li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+}
+
+.methodology-item ul li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4cc9f0;
+    font-weight: bold;
+}
+
+.update-info {
+    background-color: #e3f2fd;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 20px;
+    border-left: 4px solid #4cc9f0;
+}
+
+.update-info i {
+    color: #4cc9f0;
+    margin-right: 8px;
+}
+
+/* Responsywność dla metodologii */
+@media (max-width: 768px) {
+    .methodology-content {
+        grid-template-columns: 1fr;
+    }
+}

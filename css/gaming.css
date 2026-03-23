@@ -1,0 +1,389 @@
+/* gaming.css - Styl strony gaming */
+
+/* Hero sekcja gaming */
+.gaming-hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #4a1e6e 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.gaming-hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="30" r="1.5" fill="rgba(255,255,255,0.15)"/><circle cx="80" cy="40" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="30" cy="60" r="2" fill="rgba(255,255,255,0.2)"/><circle cx="70" cy="70" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+    opacity: 0.3;
+}
+
+/* Benchmarki */
+.gaming-benchmarks {
+    margin-bottom: 60px;
+}
+
+.benchmark-filters {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0 30px;
+    justify-content: center;
+}
+
+.benchmark-filter {
+    padding: 10px 25px;
+    background: #f8f9fa;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.benchmark-filter:hover {
+    background: #e9ecef;
+}
+
+.benchmark-filter.active {
+    background: linear-gradient(135deg, #4cc9f0, #4361ee);
+    color: white;
+    border-color: transparent;
+}
+
+.benchmarks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.benchmark-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.benchmark-card:hover {
+    transform: translateY(-5px);
+}
+
+.benchmark-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f8ff;
+}
+
+.benchmark-header h3 {
+    margin: 0;
+    color: #1a1a2e;
+}
+
+.benchmark-setting {
+    background: #f0f8ff;
+    color: #4cc9f0;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.benchmark-results {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gpu-result {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.gpu-name {
+    min-width: 120px;
+    font-weight: 600;
+    color: #1a1a2e;
+}
+
+.fps-bar {
+    flex: 1;
+    height: 30px;
+    background: linear-gradient(90deg, #4cc9f0, #4361ee);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.fps-value {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Konfiguracje gamingowe */
+.gaming-setups {
+    margin-bottom: 60px;
+}
+
+.setup-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.setup-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.setup-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.setup-card.budget {
+    border-top: 4px solid #4CAF50;
+}
+
+.setup-card.midrange {
+    border-top: 4px solid #2196F3;
+}
+
+.setup-card.high-end {
+    border-top: 4px solid #FF9800;
+}
+
+.setup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f8ff;
+}
+
+.setup-header h3 {
+    margin: 0;
+    color: #1a1a2e;
+    font-size: 1.3rem;
+}
+
+.setup-price {
+    background: #f0f8ff;
+    color: #4361ee;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.setup-specs {
+    margin-bottom: 25px;
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.spec-item:last-child {
+    border-bottom: none;
+}
+
+.spec-item i {
+    color: #4cc9f0;
+    width: 20px;
+    text-align: center;
+}
+
+.setup-performance h4 {
+    color: #1a1a2e;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.setup-performance ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.setup-performance li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #666;
+}
+
+.setup-performance li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4cc9f0;
+    font-weight: bold;
+}
+
+/* Porady dla graczy */
+.gaming-tips {
+    margin-bottom: 60px;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.tip-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.tip-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4cc9f0, #4361ee);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.tip-card h3 {
+    color: #1a1a2e;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.tip-card p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Gaming news */
+.gaming-news {
+    margin-bottom: 60px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.news-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.news-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-image img {
+    transform: scale(1.05);
+}
+
+.news-content {
+    padding: 25px;
+}
+
+.news-content h3 {
+    color: #1a1a2e;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.news-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.news-date {
+    display: block;
+    color: #4cc9f0;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .benchmarks-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .setup-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .benchmark-header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .gpu-result {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .gpu-name {
+        min-width: auto;
+    }
+    
+    .fps-bar {
+        width: 100%;
+    }
+}

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porady - Świat Komputerów</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/porady.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/Designer (11).png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-lightbulb"></i>
+                <h1>Porady</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Strona Główna</a></li>
+                    <li><a href="komponenty.html"><i class="fas fa-microchip"></i> Komponenty</a></li>
+                    <li><a href="procesory.html"><i class="fas fa-microchip"></i> Procesory</a></li>
+                    <li><a href="pamiec-ram.html"><i class="fas fa-memory"></i> RAM</a></li>
+                    <li><a href="karty-graficzne.html"><i class="fas fa-video-card"></i> Karty Graficzne</a></li>
+                    <li><a href="gaming.html"><i class="fas fa-gamepad"></i> Gaming</a></li>
+                    <li><a href="porady.html" class="active"><i class="fas fa-lightbulb"></i> Porady</a></li>
+                    <li><a href="przyszlosc.html"><i class="fas fa-rocket"></i> Przyszłość</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero advice-hero">
+        <div class="container">
+            <h2>Porady i Przewodniki</h2>
+            <p>Kompleksowe porady dotyczące budowy, konfiguracji i optymalizacji komputerów</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Kategorie porad -->
+        <section class="advice-categories">
+            <h2>Wybierz kategorię porad</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="building">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Budowa PC</h3>
+                    <p>Jak zbudować komputer od podstaw</p>
+                </div>
+                <div class="category-card" data-category="optimization">
+                    <div class="category-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Optymalizacja</h3>
+                    <p>Przyspiesz swój komputer</p>
+                </div>
+                <div class="category-card" data-category="troubleshooting">
+                    <div class="category-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Rozwiązywanie problemów</h3>
+                    <p>Diagnostyka i naprawa</p>
+                </div>
+                <div class="category-card" data-category="maintenance">
+                    <div class="category-icon">
+                        <i class="fas fa-broom"></i>
+                    </div>
+                    <h3>Konserwacja</h3>
+                    <p>Czyszczenie i pielęgnacja</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Porady główne -->
+        <section class="featured-advice">
+            <h2>Najpopularniejsze porady</h2>
+            
+            <div class="advice-accordion">
+                <!-- Porada 1 -->
+                <div class="accordion-item active">
+                    <div class="accordion-header">
+                        <h3><i class="fas fa-computer"></i> Jak zbudować komputer gamingowy krok po kroku</h3>
+                        <span class="accordion-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="advice-content">
+                            <div class="advice-meta">
+                                <span><i class="far fa-clock"></i> Czas czytania: 15 min</span>
+                                <span><i class="far fa-calendar"></i> Aktualizacja: Marzec 2024</span>
+                                <span><i class="fas fa-level-up-alt"></i> Poziom: Średniozaawansowany</span>
+                            </div>
+                            
+                            <div class="advice-steps">
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Planowanie budżetu i cel</h4>
+                                        <p>Określ budżet i przeznaczenie komputera (gaming 1080p/1440p/4K, streaming, praca).</p>
+                                        <ul>
+                                            <li>Gaming 1080p: 3000-5000 zł</li>
+                                            <li>Gaming 1440p: 5000-8000 zł</li>
+                                            <li>Gaming 4K: 8000-15000+ zł</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Wybór komponentów</h4>
+                                        <p>Dobierz komponenty zapewniające kompatybilność:</p>
+                                        <div class="component-list">
+                                            <div class="component">
+                                                <strong>Procesor:</strong> AMD Ryzen 5/7 lub Intel Core i5/i7
+                                            </div>
+                                            <div class="component">
+                                                <strong>Karta graficzna:</strong> Najważniejszy komponent gamingowy
+                                            </div>
+                                            <div class="component">
+                                                <strong>RAM:</strong> Minimum 16GB DDR4/DDR5
+                                            </div>
+                                            <div class="component">
+                                                <strong>Dysk:</strong> SSD NVMe 1TB+
+                                            </div>
+                                            <div class="component">
+                                                <strong>Zasilacz:</strong> 80+ Bronze/Gold, odpowiednia moc
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Montaż komponentów</h4>
+                                        <p>Kolejność montażu:</p>
+                                        <ol>
+                                            <li>Zainstaluj procesor na płycie głównej</li>
+                                            <li>Zamontuj RAM</li>
+                                            <li>Zainstaluj SSD M.2</li>
+                                            <li>Przygotuj obudowę</li>
+                                            <li>Zainstaluj płytę główną</li>
+                                            <li>Podłącz zasilacz</li>
+                                            <li>Zainstaluj kartę graficzną</li>
+                                            <li>Podłącz kable</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="warning">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <div>
+                                        <strong>Uwaga!</strong> Przed montażem załóż opaskę antystatyczną lub dotknij uziemionego metalu.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="advice-tools">
+                                <h4>Potrzebne narzędzia:</h4>
+                                <div class="tools-list">
+                                    <span class="tool-tag">Śrubokręt krzyżakowy</span>
+                                    <span class="tool-tag">Opaska antystatyczna</span>
+                                    <span class="tool-tag">Ściereczka mikrofibra</span>
+                                    <span class="tool-tag">Organizer na śrubki</span>
+                                    <span class="tool-tag">Latarka</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Porada 2 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3><i class="fas fa-thermometer-half"></i> Jak obniżyć temperaturę komponentów</h3>
+                        <span class="accordion-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="advice-content">
+                            <div class="advice-meta">
+                                <span><i class="far fa-clock"></i> Czas czytania: 10 min</span>
+                                <span><i class="far fa-calendar"></i> Aktualizacja: Luty 2024</span>
+                                <span><i class="fas fa-level-up-alt"></i> Poziom: Podstawowy</span>
+                            </div>
+                            
+                            <div class="temperature-tips">
+                                <div class="tip">
+                                    <h4><i class="fas fa-wind"></i> Optymalizacja przepływu powietrza</h4>
+                                    <p>Prawidłowa konfiguracja wentylatorów:</p>
+                                    <div class="fan-layout">
+                                        <div class="fan-config">
+                                            <strong>Dodatni pressure:</strong> Więcej wentylatorów wciągających
+                                            <small>Mniej kurzu, wyższe temperatury</small>
+                                        </div>
+                                        <div class="fan-config">
+                                            <strong>Ujemny pressure:</strong> Więcej wentylatorów wyciągających
+                                            <small>Więcej kurzu, niższe temperatury</small>
+                                        </div>
+                                        <div class="fan-config recommended">
+                                            <strong>Zalecany:</strong> Zbalansowany układ
+                                            <small>2-3 wciągające z przodu, 1-2 wyciągające z tyłu/góry</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="tip">
+                                    <h4><i class="fas fa-sliders-h"></i> Zarządzanie krzywymi wentylatorów</h4>
+                                    <p>Ustaw optymalne krzywe w BIOS/UEFI lub software:</p>
+                                    <ul>
+                                        <li>20-40°C: 20-30% prędkości</li>
+                                        <li>40-60°C: 40-60% prędkości</li>
+                                        <li>60-80°C: 70-90% prędkości</li>
+                                        <li>80°C+: 100% prędkości</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="tip">
+                                    <h4><i class="fas fa-sync-alt"></i> Wymiana pasty termoprzewodzącej</h4>
+                                    <p>Jak prawidłowo nałożyć pastę:</p>
+                                    <div class="paste-methods">
+                                        <div class="method">
+                                            <strong>Metoda groszku:</strong> Mała kropla na środku
+                                            <small>Najpopularniejsza, działa dla większości CPU</small>
+                                        </div>
+                                        <div class="method">
+                                            <strong>Metoda X:</strong> Nanieś pastę w kształcie X
+                                            <small>Dla większych procesorów</small>
+                                        </div>
+                                        <div class="method">
+                                            <strong>Metoda rozprowadzenia:</strong> Rozprowadź równomiernie
+                                            <small>Wymaga precyzji, ryzyko bąbelków powietrza</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="temperature-table">
+                                <h4>Optymalne temperatury:</h4>
+                                <table>
+                                    <tr>
+                                        <th>Komponent</th>
+                                        <th>Normalna</th>
+                                        <th>Wysoka</th>
+                                        <th>Krytyczna</th>
+                                    </tr>
+                                    <tr>
+                                        <td>CPU (gaming)</td>
+                                        <td class="good">60-75°C</td>
+                                        <td class="warning">76-85°C</td>
+                                        <td class="danger">86°C+</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GPU (gaming)</td>
+                                        <td class="good">65-80°C</td>
+                                        <td class="warning">81-90°C</td>
+                                        <td class="danger">91°C+</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NVMe SSD</td>
+                                        <td class="good">40-60°C</td>
+                                        <td class="warning">61-70°C</td>
+                                        <td class="danger">71°C+</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Porada 3 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3><i class="fas fa-bolt"></i> Jak zwiększyć wydajność w grach</h3>
+                        <span class="accordion-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="advice-content">
+                            <div class="advice-meta">
+                                <span><i class="far fa-clock"></i> Czas czytania: 12 min</span>
+                                <span><i class="far fa-calendar"></i> Aktualizacja: Styczeń 2024</span>
+                                <span><i class="fas fa-level-up-alt"></i> Poziom: Zaawansowany</span>
+                            </div>
+                            
+                            <div class="gaming-optimization">
+                                <div class="optimization-section">
+                                    <h4><i class="fas fa-cog"></i> Optymalizacja systemu Windows</h4>
+                                    <div class="optimization-tips">
+                                        <div class="optimization-tip">
+                                            <strong>Wyłączanie niepotrzebnych usług:</strong>
+                                            <code>services.msc</code> - wyłącz: SysMain, Connected User Experiences...
+                                        </div>
+                                        <div class="optimization-tip">
+                                            <strong>Schemat zasilania:</strong> Ustaw "Wysoka wydajność"
+                                        </div>
+                                        <div class="optimization-tip">
+                                            <strong>Gaming Mode:</strong> Włącz w Windows Settings → Gaming
+                                        </div>
+                                        <div class="optimization-tip">
+                                            <strong>Xbox Game Bar:</strong> Wyłącz jeśli nie używasz
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="optimization-section">
+                                    <h4><i class="fas fa-video"></i> Optymalizacja sterowników GPU</h4>
+                                    <div class="driver-settings">
+                                        <div class="driver-section">
+                                            <h5>NVIDIA Control Panel:</h5>
+                                            <ul>
+                                                <li>Power Management Mode: Prefer maximum performance</li>
+                                                <li>Texture Filtering Quality: High performance</li>
+                                                <li>Vertical Sync: Off (chyba że tearing)</li>
+                                                <li>Low Latency Mode: Ultra</li>
+                                            </ul>
+                                        </div>
+                                        <div class="driver-section">
+                                            <h5>AMD Adrenalin:</h5>
+                                            <ul>
+                                                <li>Radeon Anti-Lag: On</li>
+                                                <li>Radeon Boost: On (dla kompetetywnych gier)</li>
+                                                <li>Texture Filtering Quality: Performance</li>
+                                                <li>Wait for Vertical Refresh: Always off</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="optimization-section">
+                                    <h4><i class="fas fa-gamepad"></i> Ustawienia w grach</h4>
+                                    <div class="game-settings">
+                                        <div class="settings-category">
+                                            <strong>Największy wpływ na FPS:</strong>
+                                            <ul>
+                                                <li>Shadows: Medium/Low (-20-30% FPS)</li>
+                                                <li>Anti-Aliasing: TAA/SMAA (zamiast MSAA)</li>
+                                                <li>Reflections: Medium/Low</li>
+                                                <li>View Distance: Medium</li>
+                                            </ul>
+                                        </div>
+                                        <div class="settings-category">
+                                            <strong>Najmniejszy wpływ na FPS:</strong>
+                                            <ul>
+                                                <li>Texture Quality: High/Ultra</li>
+                                                <li>Anisotropic Filtering: 16x</li>
+                                                <li>Model Quality: Medium/High</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="benchmark-results">
+                                <h4>Przykładowy wzrost wydajności:</h4>
+                                <div class="benchmark-bar">
+                                    <div class="benchmark-label">Stock</div>
+                                    <div class="benchmark-bar-container">
+                                        <div class="benchmark-value" style="width: 100%">100%</div>
+                                    </div>
+                                </div>
+                                <div class="benchmark-bar">
+                                    <div class="benchmark-label">+ System optymalization</div>
+                                    <div class="benchmark-bar-container">
+                                        <div class="benchmark-value optimized" style="width: 115%">115%</div>
+                                    </div>
+                                </div>
+                                <div class="benchmark-bar">
+                                    <div class="benchmark-label">+ GPU settings</div>
+                                    <div class="benchmark-bar-container">
+                                        <div class="benchmark-value optimized" style="width: 130%">130%</div>
+                                    </div>
+                                </div>
+                                <div class="benchmark-bar">
+                                    <div class="benchmark-label">+ Game settings</div>
+                                    <div class="benchmark-bar-container">
+                                        <div class="benchmark-value optimized" style="width: 150%">150%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Tips -->
+        <section class="quick-tips">
+            <h2>Szybkie porady</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-hdd"></i>
+                    </div>
+                    <h3>Optymalizacja dysków</h3>
+                    <ul>
+                        <li>Włącz TRIM dla SSD</li>
+                        <li>Wyłącz defragmentację dla SSD</li>
+                        <li>Zostaw 10-20% wolnego miejsca na SSD</li>
+                    </ul>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-memory"></i>
+                    </div>
+                    <h3>Optymalizacja RAM</h3>
+                    <ul>
+                        <li>Włącz XMP/EXPO w BIOS</li>
+                        <li>Ustaw wirtualną pamięć na SSD</li>
+                        <li>Zamknij niepotrzebne programy w tle</li>
+                    </ul>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Opóźnienia sieciowe</h3>
+                    <ul>
+                        <li>Użyj kabla Ethernet zamiast WiFi</li>
+                        <li>Włącz QoS w routerze</li>
+                        <li>Zamknij torrenty podczas gaming</li>
+                    </ul>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Bezpieczeństwo</h3>
+                    <ul>
+                        <li>Regularne aktualizacje</li>
+                        <li>Backup ważnych danych</li>
+                        <li>Antywirus z gaming mode</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculator Section -->
+        <section class="calculator-section">
+            <h2>Kalkulatory i narzędzia</h2>
+            <div class="calculators-grid">
+                <div class="calculator-card">
+                    <h3><i class="fas fa-bolt"></i> Kalkulator zasilacza</h3>
+                    <div class="calculator">
+                        <div class="calc-input">
+                            <label>Procesor:</label>
+                            <select id="calc-cpu">
+                                <option value="65">Ryzen 5/Intel i5 (65W)</option>
+                                <option value="105">Ryzen 7/Intel i7 (105W)</option>
+                                <option value="170">Ryzen 9/Intel i9 (170W)</option>
+                            </select>
+                        </div>
+                        <div class="calc-input">
+                            <label>Karta graficzna:</label>
+                            <select id="calc-gpu">
+                                <option value="150">RTX 4060/RX 7600 (150W)</option>
+                                <option value="200">RTX 4070/RX 7700 XT (200W)</option>
+                                <option value="285">RTX 4080/RX 7900 XT (285W)</option>
+                                <option value="450">RTX 4090/RX 7900 XTX (450W)</option>
+                            </select>
+                        </div>
+                        <div class="calc-input">
+                            <label>Ilość dysków:</label>
+                            <input type="number" id="calc-drives" value="2" min="1" max="10">
+                        </div>
+                        <button id="calculate-psu" class="calc-button">Oblicz moc</button>
+                        <div class="calc-result">
+                            <h4>Wynik: <span id="psu-result">0W</span></h4>
+                            <p>Zalecany zasilacz: <span id="psu-recommendation">-</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="calculator-card">
+                    <h3><i class="fas fa-dollar-sign"></i> Kalkulator budżetu</h3>
+                    <div class="calculator">
+                        <div class="calc-input">
+                            <label>Całkowity budżet (zł):</label>
+                            <input type="range" id="budget-slider" min="2000" max="15000" value="5000" step="500">
+                            <div class="slider-value"><span id="budget-value">5000</span> zł</div>
+                        </div>
+                        <div class="budget-distribution">
+                            <div class="budget-item">
+                                <label>CPU: <span id="budget-cpu">30%</span></label>
+                                <div class="budget-bar">
+                                    <div class="budget-fill" style="width: 30%"></div>
+                                </div>
+                            </div>
+                            <div class="budget-item">
+                                <label>GPU: <span id="budget-gpu">40%</span></label>
+                                <div class="budget-bar">
+                                    <div class="budget-fill" style="width: 40%"></div>
+                                </div>
+                            </div>
+                            <div class="budget-item">
+                                <label>RAM: <span id="budget-ram">10%</span></label>
+                                <div class="budget-bar">
+                                    <div class="budget-fill" style="width: 10%"></div>
+                                </div>
+                            </div>
+                            <div class="budget-item">
+                                <label>Dysk: <span id="budget-storage">10%</span></label>
+                                <div class="budget-bar">
+                                    <div class="budget-fill" style="width: 10%"></div>
+                                </div>
+                            </div>
+                            <div class="budget-item">
+                                <label>Inne: <span id="budget-other">10%</span></label>
+                                <div class="budget-bar">
+                                    <div class="budget-fill" style="width: 10%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="budget-results">
+                            <h4>Sugerowane komponenty:</h4>
+                            <div id="budget-suggestions">
+                                Ładowanie sugestii...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Świat Komputerów</h3>
+                    <p>Portal dla entuzjastów technologii i komputerów.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Porady</h3>
+                    <ul>
+                        <li><a href="#building">Budowa PC</a></li>
+                        <li><a href="#optimization">Optymalizacja</a></li>
+                        <li><a href="#troubleshooting">Rozwiązywanie problemów</a></li>
+                        <li><a href="#maintenance">Konserwacja</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Przydatne narzędzia</h3>
+                    <ul>
+                        <li><a href="#calculator">Kalkulator zasilacza</a></li>
+                        <li><a href="#budget">Kalkulator budżetu</a></li>
+                        <li><a href="#">Kompatybilność komponentów</a></li>
+                        <li><a href="#">Testy wydajności</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p><i class="fas fa-envelope"></i> porady@swiatkomputerow.pl</p>
+                    <p><i class="fas fa-comments"></i> Forum wsparcia</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-reddit"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Świat Komputerów. Wszelkie prawa zastrzeżone.</p>
+                <p>Porady aktualizowane na bieżąco</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Skrypty JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/porady.js"></script>
+</body>
+</html>

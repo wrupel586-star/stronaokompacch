@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesory - Świat Komputerów</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/procesory.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/Designer (11).png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-microchip"></i>
+                <h1>Procesory</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Strona Główna</a></li>
+                    <li><a href="komponenty.html"><i class="fas fa-microchip"></i> Komponenty</a></li>
+                    <li><a href="procesory.html" class="active"><i class="fas fa-brain"></i> Procesory</a></li>
+                    <li><a href="karty-graficzne.html"><i class="fas fa-gamepad"></i> Karty Graficzne</a></li>
+                    <li><a href="zasilacze.html"><i class="fas fa-bolt"></i> Zasilacze</a></li>
+                    <li><a href="plyty-glowne.html"><i class="fas fa-server"></i> Płyty Główne</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h2>Procesory (CPU)</h2>
+            <p>Mózg komputera - poznaj najnowsze technologie procesorowe</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="cpu-intro">
+            <h2>Czym jest procesor?</h2>
+            <p>Procesor (CPU - Central Processing Unit) to podstawowy element komputera odpowiedzialny za wykonywanie instrukcji programów. Od jego wydajności zależy szybkość działania całego systemu.</p>
+        </section>
+
+        <section class="cpu-simulator-section">
+            <h2>Symulator doboru procesora</h2>
+            <p>Dopasuj procesor do swoich potrzeb i budżetu</p>
+            
+            <div class="simulator-container">
+                <div class="simulator-controls">
+                    <div class="control-group">
+                        <label for="usage-type"><i class="fas fa-tasks"></i> Przeznaczenie:</label>
+                        <select id="usage-type">
+                            <option value="office">Biuro i multimedia</option>
+                            <option value="gaming">Gaming</option>
+                            <option value="creative">Twórczość i projektowanie</option>
+                            <option value="streaming">Streaming i nagrywanie</option>
+                            <option value="server">Serwer i stacja robocza</option>
+                        </select>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="budget"><i class="fas fa-wallet"></i> Budżet (zł):</label>
+                        <div class="budget-slider">
+                            <input type="range" id="budget" min="300" max="5000" step="100" value="1500">
+                            <div class="budget-values">
+                                <span>300 zł</span>
+                                <span id="budget-value">1500 zł</span>
+                                <span>5000+ zł</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label><i class="fas fa-microchip"></i> Preferowany producent:</label>
+                        <div class="manufacturer-toggle">
+                            <button class="toggle-btn active" data-value="both">Dowolny</button>
+                            <button class="toggle-btn" data-value="intel">Intel</button>
+                            <button class="toggle-btn" data-value="amd">AMD</button>
+                        </div>
+                    </div>
+                    
+                    <button id="simulate-cpu" class="btn-simulate">
+                        <i class="fas fa-search"></i> Znajdź procesor
+                    </button>
+                </div>
+                
+                <div id="simulation-result" class="simulation-result">
+                    <!-- Wyniki będą wstawiane dynamicznie -->
+                </div>
+            </div>
+        </section>
+
+        <section class="cpu-models">
+            <h2>Popularne modele procesorów</h2>
+            <p>Przegląd najczęściej wybieranych procesorów na rynku</p>
+            
+            <div class="models-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="intel">Intel</button>
+                    <button class="tab-btn" data-tab="amd">AMD</button>
+                    <button class="tab-btn" data-tab="budget">Budżetowe</button>
+                    <button class="tab-btn" data-tab="gaming">Gaming</button>
+                </div>
+                
+                <div class="tab-content active" id="tab-intel">
+                    <div class="models-grid">
+                        <!-- Intel procesory -->
+                        <div class="model-card">
+                            <div class="model-header intel">
+                                <span class="model-series">Core i3</span>
+                                <h3>Intel Core i3-13100</h3>
+                            </div>
+                            <div class="model-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>4 rdzenie / 8 wątków</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>3.4 - 4.5 GHz</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-memory"></i>
+                                    <span>12 MB cache</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-thermometer-half"></i>
+                                    <span>60W TDP</span>
+                                </div>
+                            </div>
+                            <div class="model-price">≈ 550 zł</div>
+                            <div class="model-recommendation">
+                                <span class="rec-tag office">Biuro</span>
+                                <span class="rec-tag budget">Budżet</span>
+                            </div>
+                            <a href="#" class="model-more">Szczegóły <i class="fas fa-arrow-right"></i></a>
+                        </div>
+
+                        <div class="model-card">
+                            <div class="model-header intel">
+                                <span class="model-series">Core i5</span>
+                                <h3>Intel Core i5-13600K</h3>
+                            </div>
+                            <div class="model-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>14 rdzeni / 20 wątków</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>3.5 - 5.1 GHz</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-memory"></i>
+                                    <span>24 MB cache</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-thermometer-half"></i>
+                                    <span>125W TDP</span>
+                                </div>
+                            </div>
+                            <div class="model-price">≈ 1250 zł</div>
+                            <div class="model-recommendation">
+                                <span class="rec-tag gaming">Gaming</span>
+                                <span class="rec-tag creative">Kreatywność</span>
+                            </div>
+                            <a href="#" class="model-more">Szczegóły <i class="fas fa-arrow-right"></i></a>
+                        </div>
+
+                        <div class="model-card">
+                            <div class="model-header intel">
+                                <span class="model-series">Core i7</span>
+                                <h3>Intel Core i7-13700K</h3>
+                            </div>
+                            <div class="model-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>16 rdzeni / 24 wątków</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>3.4 - 5.4 GHz</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-memory"></i>
+                                    <span>30 MB cache</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-thermometer-half"></i>
+                                    <span>125W TDP</span>
+                                </div>
+                            </div>
+                            <div class="model-price">≈ 1850 zł</div>
+                            <div class="model-recommendation">
+                                <span class="rec-tag creative">Kreatywność</span>
+                                <span class="rec-tag streaming">Streaming</span>
+                            </div>
+                            <a href="#" class="model-more">Szczegóły <i class="fas fa-arrow-right"></i></a>
+                        </div>
+
+                        <div class="model-card">
+                            <div class="model-header intel">
+                                <span class="model-series">Core i9</span>
+                                <h3>Intel Core i9-13900K</h3>
+                            </div>
+                            <div class="model-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>24 rdzenie / 32 wątki</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>3.0 - 5.8 GHz</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-memory"></i>
+                                    <span>36 MB cache</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-thermometer-half"></i>
+                                    <span>125W TDP</span>
+                                </div>
+                            </div>
+                            <div class="model-price">≈ 2500 zł</div>
+                            <div class="model-recommendation">
+                                <span class="rec-tag pro">Professional</span>
+                                <span class="rec-tag server">Stacja robocza</span>
+                            </div>
+                            <a href="#" class="model-more">Szczegóły <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="tab-amd">
+                    <div class="models-grid">
+                        <!-- AMD procesory -->
+                        <div class="model-card">
+                            <div class="model-header amd">
+                                <span class="model-series">Ryzen 5</span>
+                                <h3>AMD Ryzen 5 7600X</h3>
+                            </div>
+                            <div class="model-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>6 rdzeni / 12 wątków</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>4.7 - 5.3 GHz</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-memory"></i>
+                                    <span>32 MB cache</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-thermometer-half"></i>
+                                    <span>105W TDP</span>
+                                </div>
+                            </div>
+                            <div class="model-price">≈ 1100 zł</div>
+                            <div class="model-recommendation">
+                                <span class="rec-tag gaming">Gaming</span>
+                                <span class="rec-tag creative">Kreatywność</span>
+                            </div>
+                            <a href="#" class="model-more">Szczegóły <i class="fas fa-arrow-right"></i></a>
+                        </div>
+
+                        <div class="model-card">
+                            <div class="model-header amd">
+                                <span class="model-series">Ryzen 7</span>
+                                <h3>AMD Ryzen 7 7700X</h3>
+                            </div>
+                            <div class="model-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>8 rdzeni / 16 wątków</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>4.5 - 5.4 GHz</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-memory"></i>
+                                    <span>32 MB cache</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-thermometer-half"></i>
+                                    <span>105W TDP</span>
+                                </div>
+                            </div>
+                            <div class="model-price">≈ 1600 zł</div>
+                            <div class="model-recommendation">
+                                <span class="rec-tag creative">Kreatywność</span>
+                                <span class="rec-tag streaming">Streaming</span>
+                            </div>
+                            <a href="#" class="model-more">Szczegóły <i class="fas fa-arrow-right"></i></a>
+                        </div>
+
+                        <div class="model-card">
+                            <div class="model-header amd">
+                                <span class="model-series">Ryzen 9</span>
+                                <h3>AMD Ryzen 9 7900X</h3>
+                            </div>
+                            <div class="model-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>12 rdzeni / 24 wątki</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>4.7 - 5.6 GHz</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-memory"></i>
+                                    <span>64 MB cache</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-thermometer-half"></i>
+                                    <span>170W TDP</span>
+                                </div>
+                            </div>
+                            <div class="model-price">≈ 2200 zł</div>
+                            <div class="model-recommendation">
+                                <span class="rec-tag pro">Professional</span>
+                                <span class="rec-tag server">Renderowanie</span>
+                            </div>
+                            <a href="#" class="model-more">Szczegóły <i class="fas fa-arrow-right"></i></a>
+                        </div>
+
+                        <div class="model-card">
+                            <div class="model-header amd">
+                                <span class="model-series">Threadripper</span>
+                                <h3>AMD Threadripper PRO 5995WX</h3>
+                            </div>
+                            <div class="model-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>64 rdzenie / 128 wątków</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>2.7 - 4.5 GHz</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-memory"></i>
+                                    <span>256 MB cache</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-thermometer-half"></i>
+                                    <span>280W TDP</span>
+                                </div>
+                            </div>
+                            <div class="model-price">≈ 25 000 zł</div>
+                            <div class="model-recommendation">
+                                <span class="rec-tag server">Serwer</span>
+                                <span class="rec-tag pro">Professional Workstation</span>
+                            </div>
+                            <a href="#" class="model-more">Szczegóły <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="tab-budget">
+                    <div class="models-grid">
+                        <!-- Procesory budżetowe -->
+                        <div class="model-card">
+                            <div class="model-header intel">
+                                <span class="model-series">Pentium Gold</span>
+                                <h3>Intel Pentium Gold G7400</h3>
+                            </div>
+                            <div class="model-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>2 rdzenie / 4 wątki</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>3.7 GHz</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-memory"></i>
+                                    <span>6 MB cache</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-thermometer-half"></i>
+                                    <span>46W TDP</span>
+                                </div>
+                            </div>
+                            <div class="model-price">≈ 350 zł</div>
+                            <div class="model-recommendation">
+                                <span class="rec-tag budget">Ekstremalny budżet</span>
+                                <span class="rec-tag office">Biuro</span>
+                            </div>
+                            <a href="#" class="model-more">Szczegóły <i class="fas fa-arrow-right"></i></a>
+                        </div>
+
+                        <div class="model-card">
+                            <div class="model-header amd">
+                                <span class="model-series">Athlon</span>
+                                <h3>AMD Athlon Gold 3150G</h3>
+                            </div>
+                            <div class="model-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>4 rdzenie / 4 wątki</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>3.5 - 3.9 GHz</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-memory"></i>
+                                    <span>4 MB cache</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-thermometer-half"></i>
+                                    <span>35W TDP</span>
+                                </div>
+                            </div>
+                            <div class="model-price">≈ 400 zł</div>
+                            <div class="model-recommendation">
+                                <span class="rec-tag budget">Ekstremalny budżet</span>
+                                <span class="rec-tag office">HTPC</span>
+                            </div>
+                            <a href="#" class="model-more">Szczegóły <i class="fas fa-arrow-right"></i></a>
+                        </div>
+
+                        <div class="model-card">
+                            <div class="model-header intel">
+                                <span class="model-series">Core i3</span>
+                                <h3>Intel Core i3-12100F</h3>
+                            </div>
+                            <div class="model-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>4 rdzenie / 8 wątków</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>3.3 - 4.3 GHz</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-memory"></i>
+                                    <span>12 MB cache</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-thermometer-half"></i>
+                                    <span>58W TDP</span>
+                                </div>
+                            </div>
+                            <div class="model-price">≈ 500 zł</div>
+                            <div class="model-recommendation">
+                                <span class="rec-tag budget">Budżetowy gaming</span>
+                                <span class="rec-tag office">Biuro+</span>
+                            </div>
+                            <a href="#" class="model-more">Szczegóły <i class="fas fa-arrow-right"></i></a>
+                        </div>
+
+                        <div class="model-card">
+                            <div class="model-header amd">
+                                <span class="model-series">Ryzen 3</span>
+                                <h3>AMD Ryzen 3 4100</h3>
+                            </div>
+                            <div class="model-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>4 rdzenie / 8 wątków</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>3.8 - 4.0 GHz</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-memory"></i>
+                                    <span>8 MB cache</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-thermometer-half"></i>
+                                    <span>65W TDP</span>
+                                </div>
+                            </div>
+                            <div class="model-price">≈ 450 zł</div>
+                            <div class="model-recommendation">
+                                <span class="rec-tag budget">Budżetowy gaming</span>
+                                <span class="rec-tag office">Biuro+</span>
+                            </div>
+                            <a href="#" class="model-more">Szczegóły <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="tab-gaming">
+                    <div class="models-grid">
+                        <!-- Procesory gamingowe -->
+                        <div class="model-card">
+                            <div class="model-header intel">
+                                <span class="model-series">Core i5</span>
+                                <h3>Intel Core i5-13600KF</h3>
+                            </div>
+                            <div class="model-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>14 rdzeni / 20 wątków</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>3.5 - 5.1 GHz</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-memory"></i>
+                                    <span>24 MB cache</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-thermometer-half"></i>
+                                    <span>125W TDP</span>
+                                </div>
+                            </div>
+                            <div class="model-price">≈ 1200 zł</div>
+                            <div class="model-recommendation">
+                                <span class="rec-tag gaming">1080p/1440p Gaming</span>
+                                <span class="rec-tag streaming">Streaming</span>
+                            </div>
+                            <a href="#" class="model-more">Szczegóły <i class="fas fa-arrow-right"></i></a>
+                        </div>
+
+                        <div class="model-card">
+                            <div class="model-header amd">
+                                <span class="model-series">Ryzen 5</span>
+                                <h3>AMD Ryzen 5 7600X</h3>
+                            </div>
+                            <div class="model-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>6 rdzeni / 12 wątków</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>4.7 - 5.3 GHz</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-memory"></i>
+                                    <span>32 MB cache</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-thermometer-half"></i>
+                                    <span>105W TDP</span>
+                                </div>
+                            </div>
+                            <div class="model-price">≈ 1100 zł</div>
+                            <div class="model-recommendation">
+                                <span class="rec-tag gaming">1080p/1440p Gaming</span>
+                                <span class="rec-tag creative">Kreatywność</span>
+                            </div>
+                            <a href="#" class="model-more">Szczegóły <i class="fas fa-arrow-right"></i></a>
+                        </div>
+
+                        <div class="model-card">
+                            <div class="model-header intel">
+                                <span class="model-series">Core i7</span>
+                                <h3>Intel Core i7-13700KF</h3>
+                            </div>
+                            <div class="model-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>16 rdzeni / 24 wątki</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>3.4 - 5.4 GHz</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-memory"></i>
+                                    <span>30 MB cache</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-thermometer-half"></i>
+                                    <span>125W TDP</span>
+                                </div>
+                            </div>
+                            <div class="model-price">≈ 1800 zł</div>
+                            <div class="model-recommendation">
+                                <span class="rec-tag gaming">1440p/4K Gaming</span>
+                                <span class="rec-tag streaming">Profesjonalny streaming</span>
+                            </div>
+                            <a href="#" class="model-more">Szczegóły <i class="fas fa-arrow-right"></i></a>
+                        </div>
+
+                        <div class="model-card">
+                            <div class="model-header amd">
+                                <span class="model-series">Ryzen 7</span>
+                                <h3>AMD Ryzen 7 7800X3D</h3>
+                            </div>
+                            <div class="model-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>8 rdzeni / 16 wątków</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>4.2 - 5.0 GHz</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-memory"></i>
+                                    <span>96 MB cache</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-thermometer-half"></i>
+                                    <span>120W TDP</span>
+                                </div>
+                            </div>
+                            <div class="model-price">≈ 1900 zł</div>
+                            <div class="model-recommendation">
+                                <span class="rec-tag gaming">Najlepszy do gier</span>
+                                <span class="rec-tag creative">Kreatywność</span>
+                            </div>
+                            <a href="#" class="model-more">Szczegóły <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cpu-benchmark">
+            <h2>Porównanie wydajności gamingowej</h2>
+            <p>Wydajność w popularnych grach (FPS - wyższe = lepsze)</p>
+            <div class="benchmark-chart">
+                <!-- Dane będą wypełniane przez JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Świat Komputerów</h3>
+                    <p>Portal dla entuzjastów technologii i komputerów.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Komponenty</h3>
+                    <ul>
+                        <li><a href="procesory.html" class="active">Procesory</a></li>
+                        <li><a href="karty-graficzne.html">Karty Graficzne</a></li>
+                        <li><a href="plyty-glowne.html">Płyty Główne</a></li>
+                        <li><a href="zasilacze.html">Zasilacze</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Pozostałe podstrony</h3>
+                    <ul>
+                        <li><a href="gaming.html">Gaming</a></li>
+                        <li><a href="top-produkty.html">Top Produkty</a></li>
+                        <li><a href="historia.html">Historia komputerów</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p><i class="fas fa-envelope"></i> kontakt@swiatkomputerow.pl</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Świat Komputerów. Wszelkie prawa zastrzeżone.</p>
+                <p>Odwiedzin: <span id="visit-counter">0</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/procesory.js"></script>
+</body>
+</html>

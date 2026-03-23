@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming - Świat Komputerów</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/gaming.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/Designer (11).png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-gamepad"></i>
+                <h1>Gaming</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Strona Główna</a></li>
+                    <li><a href="komponenty.html"><i class="fas fa-microchip"></i> Komponenty</a></li>
+                    <li><a href="procesory.html"><i class="fas fa-microchip"></i> Procesory</a></li>
+                    <li><a href="pamiec-ram.html"><i class="fas fa-memory"></i> RAM</a></li>
+                    <li><a href="dyski.html"><i class="fas fa-hdd"></i> Dyski</a></li>
+                    <li><a href="plyty-glowne.html"><i class="fas fa-server"></i> Płyty Główne</a></li>
+                    <li><a href="karty-graficzne.html"><i class="fas fa-video-card"></i> Karty Graficzne</a></li>
+                    <li><a href="gaming.html" class="active"><i class="fas fa-gamepad"></i> Gaming</a></li>
+                    <li><a href="galeria.html"><i class="fas fa-images"></i> Galeria</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav> 
+        </div>
+    </header>
+
+    <section class="page-hero gaming-hero">
+        <div class="container">
+            <h2>Świat Gamingowych Komputerów</h2>
+            <p>Najlepsze konfiguracje, porady i nowości ze świata gier komputerowych</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="gaming-benchmarks">
+            <h2>Benchmarki gier</h2>
+            <p>Sprawdź wydajność kart graficznych w najpopularniejszych grach</p>
+            
+            <div class="benchmark-filters">
+                <button class="benchmark-filter active" data-resolution="1080p">1080p</button>
+                <button class="benchmark-filter" data-resolution="1440p">1440p</button>
+                <button class="benchmark-filter" data-resolution="4k">4K</button>
+            </div>
+            
+            <div class="benchmarks-grid">
+                <div class="benchmark-card">
+                    <div class="benchmark-header">
+                        <h3>Cyberpunk 2077</h3>
+                        <span class="benchmark-setting">Ultra + RT</span>
+                    </div>
+                    <div class="benchmark-results">
+                        <div class="gpu-result">
+                            <span class="gpu-name">RTX 4090</span>
+                            <div class="fps-bar" style="width: 95%">
+                                <span class="fps-value">95 FPS</span>
+                            </div>
+                        </div>
+                        <div class="gpu-result">
+                            <span class="gpu-name">RTX 4080</span>
+                            <div class="fps-bar" style="width: 78%">
+                                <span class="fps-value">78 FPS</span>
+                            </div>
+                        </div>
+                        <div class="gpu-result">
+                            <span class="gpu-name">RX 7900 XTX</span>
+                            <div class="fps-bar" style="width: 82%">
+                                <span class="fps-value">82 FPS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benchmark-card">
+                    <div class="benchmark-header">
+                        <h3>Call of Duty: Warzone</h3>
+                        <span class="benchmark-setting">Competitive</span>
+                    </div>
+                    <div class="benchmark-results">
+                        <div class="gpu-result">
+                            <span class="gpu-name">RTX 4090</span>
+                            <div class="fps-bar" style="width: 100%">
+                                <span class="fps-value">240+ FPS</span>
+                            </div>
+                        </div>
+                        <div class="gpu-result">
+                            <span class="gpu-name">RTX 4070</span>
+                            <div class="fps-bar" style="width: 85%">
+                                <span class="fps-value">180 FPS</span>
+                            </div>
+                        </div>
+                        <div class="gpu-result">
+                            <span class="gpu-name">RX 7800 XT</span>
+                            <div class="fps-bar" style="width: 80%">
+                                <span class="fps-value">170 FPS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benchmark-card">
+                    <div class="benchmark-header">
+                        <h3>Baldur's Gate 3</h3>
+                        <span class="benchmark-setting">Ultra</span>
+                    </div>
+                    <div class="benchmark-results">
+                        <div class="gpu-result">
+                            <span class="gpu-name">RTX 4090</span>
+                            <div class="fps-bar" style="width: 100%">
+                                <span class="fps-value">120 FPS</span>
+                            </div>
+                        </div>
+                        <div class="gpu-result">
+                            <span class="gpu-name">RTX 4070 Ti</span>
+                            <div class="fps-bar" style="width: 75%">
+                                <span class="fps-value">90 FPS</span>
+                            </div>
+                        </div>
+                        <div class="gpu-result">
+                            <span class="gpu-name">RX 7700 XT</span>
+                            <div class="fps-bar" style="width: 65%">
+                                <span class="fps-value">78 FPS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gaming-setups">
+            <h2>Konfiguracje gamingowe</h2>
+            <p>Gotowe zestawy dla różnych budżetów</p>
+            
+            <div class="setup-cards">
+                <div class="setup-card budget">
+                    <div class="setup-header">
+                        <h3>Budget Gaming (4000 zł)</h3>
+                        <div class="setup-price">~4000 zł</div>
+                    </div>
+                    <div class="setup-specs">
+                        <div class="spec-item">
+                            <i class="fas fa-microchip"></i>
+                            <span>CPU: Ryzen 5 7600</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-video-card"></i>
+                            <span>GPU: RTX 4060 / RX 7600</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-memory"></i>
+                            <span>RAM: 16GB DDR5</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-hdd"></i>
+                            <span>SSD: 1TB NVMe</span>
+                        </div>
+                    </div>
+                    <div class="setup-performance">
+                        <h4>Wydajność:</h4>
+                        <ul>
+                            <li>1080p @ 60+ FPS (Ultra)</li>
+                            <li>1440p @ 60 FPS (High)</li>
+                            <li>Idealne dla e-sport</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="setup-card midrange">
+                    <div class="setup-header">
+                        <h3>Mid-Range (7000 zł)</h3>
+                        <div class="setup-price">~7000 zł</div>
+                    </div>
+                    <div class="setup-specs">
+                        <div class="spec-item">
+                            <i class="fas fa-microchip"></i>
+                            <span>CPU: Ryzen 7 7800X3D</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-video-card"></i>
+                            <span>GPU: RTX 4070 Super</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-memory"></i>
+                            <span>RAM: 32GB DDR5</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-hdd"></i>
+                            <span>SSD: 2TB NVMe</span>
+                        </div>
+                    </div>
+                    <div class="setup-performance">
+                        <h4>Wydajność:</h4>
+                        <ul>
+                            <li>1440p @ 100+ FPS (Ultra)</li>
+                            <li>4K @ 60 FPS (High)</li>
+                            <li>Ray Tracing włączony</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="setup-card high-end">
+                    <div class="setup-header">
+                        <h3>High-End (12000+ zł)</h3>
+                        <div class="setup-price">12000+ zł</div>
+                    </div>
+                    <div class="setup-specs">
+                        <div class="spec-item">
+                            <i class="fas fa-microchip"></i>
+                            <span>CPU: i9-14900K / Ryzen 9</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-video-card"></i>
+                            <span>GPU: RTX 4090 / 4080 Super</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-memory"></i>
+                            <span>RAM: 32-64GB DDR5</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-hdd"></i>
+                            <span>SSD: 4TB+ NVMe</span>
+                        </div>
+                    </div>
+                    <div class="setup-performance">
+                        <h4>Wydajność:</h4>
+                        <ul>
+                            <li>4K @ 120+ FPS (Ultra)</li>
+                            <li>8K gaming możliwy</li>
+                            <li>Max Ray Tracing + DLSS 3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gaming-tips">
+            <h2>Porady dla graczy</h2>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Optymalizacja ustawień</h3>
+                    <p>Wyłącz zbędne efekty jak Motion Blur, Depth of Field. Obniż cieniowania dla większego FPS.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-thermometer-half"></i>
+                    </div>
+                    <h3>Kontrola temperatur</h3>
+                    <p>Utrzymuj CPU i GPU poniżej 80°C dla stabilnej wydajności. Regularnie czyść komputer.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Overclocking bezpieczny</h3>
+                    <p>Zwiększaj taktowania stopniowo, testując stabilność. Monitoruj napięcia i temperatury.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Niski ping w grach</h3>
+                    <p>Użyj kabla Ethernet zamiast WiFi. Wybierz serwery najbliższe geograficznie.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gaming-news">
+            <h2>Najnowsze gry i aktualizacje</h2>
+            
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="images/photo-1550745165-9bc0b252726f.avif" alt="Nowości gamingowe">
+                    </div>
+                    <div class="news-content">
+                        <h3>GTA VI - Premiera 2025</h3>
+                        <p>Rockstar zapowiedziało premierę najnowszej części serii. Wymagania sprzętowe będą wysokie.</p>
+                        <span class="news-date">Data: Q4 2025</span>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="images/photo-1534423861386-85a16f5d13fd.avif" alt="Cyberpunk update">
+                    </div>
+                    <div class="news-content">
+                        <h3>Cyberpunk 2077: Phantom Liberty</h3>
+                        <p>Dodatek wymaga RTX 4070 dla ray tracingu w 4K. CD Projekt Red poprawiło optymalizację.</p>
+                        <span class="news-date">Dostępne od 26.09.2023</span>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="images/photo-1552820728-8b83bb6b773f.avif" alt="E-sport news">
+                    </div>
+                    <div class="news-content">
+                        <h3>Nowy sezon CS2</h3>
+                        <p>Valve wprowadziło Source 2 do Counter-Strike. Gra lepiej wykorzystuje wielordzeniowe CPU.</p>
+                        <span class="news-date">Sezon 2024 rozpoczęty</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Świat Komputerów</h3>
+                    <p>Portal dla entuzjastów technologii i komputerów.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Sekcje Gaming</h3>
+                    <ul>
+                        <li><a href="karty-graficzne.html">Karty Graficzne</a></li>
+                        <li><a href="top-produkty.html">Top Produkty</a></li>
+                        <li><a href="porady.html">Porady</a></li>
+                        <li><a href="galeria.html">Galeria konstrukcji</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Pomocne narzędzia</h3>
+                    <ul>
+                        <li><a href="#">Kalkulator FPS</a></li>
+                        <li><a href="#">Konfigurator PC</a></li>
+                        <li><a href="#">Porównanie GPU</a></li>
+                        <li><a href="#">Optymalizacja gier</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Social Media</h3>
+                    <p>Śledź nasze gamingowe porady:</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitch"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-reddit"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Świat Komputerów. Wszelkie prawa zastrzeżone.</p>
+                <p>Odwiedzin: <span id="visit-counter">0</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gaming.js"></script>
+    <script>
+// Test po załadowaniu
+window.addEventListener('load', function() {
+    console.log('=== TEST GAMING.HTML ===');
+    
+    // Sprawdź czy elementy istnieją
+    const elements = [
+        '.benchmark-filter',
+        '.benchmark-card',
+        '.setup-card',
+        '.tip-card',
+        '.news-card',
+        '.fps-simulator'
+    ];
+    
+    elements.forEach(selector => {
+        const element = document.querySelector(selector);
+        console.log(`${selector}:`, element ? '✓ Znaleziono' : '✗ Nie znaleziono');
+    });
+    
+    // Test benchmarków
+    setTimeout(() => {
+        console.log('Test benchmarków...');
+        const benchmarkButtons = document.querySelectorAll('.benchmark-filter');
+        if (benchmarkButtons.length > 0) {
+            console.log(`Znaleziono ${benchmarkButtons.length} przycisków benchmarków`);
+            
+            // Kliknij 1440p dla testu
+            benchmarkButtons[1].click();
+            console.log('Kliknięto 1440p');
+        }
+    }, 1000);
+});
+</script>
+</body>
+</html>

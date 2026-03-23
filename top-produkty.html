@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Produkty - Świat Komputerów</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/top-produkty.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/Designer (11).png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-trophy"></i>
+                <h1>Top Produkty</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Strona Główna</a></li>
+                    <li><a href="komponenty.html"><i class="fas fa-microchip"></i> Komponenty</a></li>
+                    <li><a href="procesory.html"><i class="fas fa-microchip"></i> Procesory</a></li>
+                    <li><a href="pamiec-ram.html"><i class="fas fa-memory"></i> RAM</a></li>
+                    <li><a href="karty-graficzne.html"><i class="fas fa-video-card"></i> Karty Graficzne</a></li>
+                    <li><a href="gaming.html"><i class="fas fa-gamepad"></i> Gaming</a></li>
+                    <li><a href="top-produkty.html" class="active"><i class="fas fa-trophy"></i> Top Produkty</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero top-hero">
+        <div class="container">
+            <h2>Ranking Najlepszych Komponentów 2024</h2>
+            <p>Przegląd najlepszych produktów w każdej kategorii - testy, porównania, rekomendacje</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="top-categories">
+            <h2>Kategorie rankingowe</h2>
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="cpu">Procesory</button>
+                <button class="category-tab" data-category="gpu">Karty Graficzne</button>
+                <button class="category-tab" data-category="ram">Pamięć RAM</button>
+                <button class="category-tab" data-category="storage">Dyski</button>
+                <button class="category-tab" data-category="motherboard">Płyty Główne</button>
+            </div>
+        </section>
+
+        <section class="ranking-tables">
+            <!-- Tabela 1: Procesory -->
+            <div class="ranking-table active" id="table-cpu">
+                <div class="table-header">
+                    <h3><i class="fas fa-microchip"></i> Top 10 Procesorów 2024</h3>
+                    <div class="table-filter">
+                        <span>Filtruj:</span>
+                        <select id="filter-cpu">
+                            <option value="all">Wszystkie</option>
+                            <option value="gaming">Gaming</option>
+                            <option value="productivity">Produktywność</option>
+                            <option value="budget">Budget</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table class="product-table">
+                        <thead>
+                            <tr>
+                                <th>Miejsce</th>
+                                <th>Model</th>
+                                <th>Socket</th>
+                                <th>Rdzenie/Wątki</th>
+                                <th>Taktowanie</th>
+                                <th>Gaming Score</th>
+                                <th>Produktywność</th>
+                                <th>Cena (średnia)</th>
+                                <th>Ocena</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="product-row gold">
+                                <td><span class="rank-badge gold">1</span></td>
+                                <td class="product-name">
+                                    <strong>AMD Ryzen 7 7800X3D</strong>
+                                    <span class="product-tag gaming-tag">Best Gaming</span>
+                                </td>
+                                <td>AM5</td>
+                                <td>8/16</td>
+                                <td>4.2-5.0 GHz</td>
+                                <td><div class="score-bar" style="width: 98%"><span>98/100</span></div></td>
+                                <td><div class="score-bar" style="width: 85%"><span>85/100</span></div></td>
+                                <td>1800 zł</td>
+                                <td><span class="rating">9.8/10</span></td>
+                            </tr>
+                            <tr class="product-row silver">
+                                <td><span class="rank-badge silver">2</span></td>
+                                <td class="product-name">
+                                    <strong>Intel Core i9-14900K</strong>
+                                    <span class="product-tag productivity-tag">Best Productivity</span>
+                                </td>
+                                <td>LGA 1700</td>
+                                <td>24/32</td>
+                                <td>3.2-6.0 GHz</td>
+                                <td><div class="score-bar" style="width: 96%"><span>96/100</span></div></td>
+                                <td><div class="score-bar" style="width: 97%"><span>97/100</span></div></td>
+                                <td>2500 zł</td>
+                                <td><span class="rating">9.6/10</span></td>
+                            </tr>
+                            <tr class="product-row bronze">
+                                <td><span class="rank-badge bronze">3</span></td>
+                                <td class="product-name">
+                                    <strong>AMD Ryzen 9 7950X3D</strong>
+                                    <span class="product-tag hybrid-tag">Hybrid</span>
+                                </td>
+                                <td>AM5</td>
+                                <td>16/32</td>
+                                <td>4.2-5.7 GHz</td>
+                                <td><div class="score-bar" style="width: 97%"><span>97/100</span></div></td>
+                                <td><div class="score-bar" style="width: 95%"><span>95/100</span></div></td>
+                                <td>3200 zł</td>
+                                <td><span class="rating">9.5/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">4</span></td>
+                                <td class="product-name">
+                                    <strong>Intel Core i7-14700K</strong>
+                                    <span class="product-tag value-tag">Best Value</span>
+                                </td>
+                                <td>LGA 1700</td>
+                                <td>20/28</td>
+                                <td>3.4-5.6 GHz</td>
+                                <td><div class="score-bar" style="width: 92%"><span>92/100</span></div></td>
+                                <td><div class="score-bar" style="width: 90%"><span>90/100</span></div></td>
+                                <td>1900 zł</td>
+                                <td><span class="rating">9.2/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">5</span></td>
+                                <td class="product-name">
+                                    <strong>AMD Ryzen 5 7600</strong>
+                                    <span class="product-tag budget-tag">Best Budget</span>
+                                </td>
+                                <td>AM5</td>
+                                <td>6/12</td>
+                                <td>3.8-5.1 GHz</td>
+                                <td><div class="score-bar" style="width: 88%"><span>88/100</span></div></td>
+                                <td><div class="score-bar" style="width: 80%"><span>80/100</span></div></td>
+                                <td>900 zł</td>
+                                <td><span class="rating">9.0/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">6</span></td>
+                                <td class="product-name"><strong>Intel Core i5-14600K</strong></td>
+                                <td>LGA 1700</td>
+                                <td>14/20</td>
+                                <td>3.5-5.3 GHz</td>
+                                <td><div class="score-bar" style="width: 87%"><span>87/100</span></div></td>
+                                <td><div class="score-bar" style="width: 85%"><span>85/100</span></div></td>
+                                <td>1400 zł</td>
+                                <td><span class="rating">8.8/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">7</span></td>
+                                <td class="product-name"><strong>AMD Ryzen 7 7700</strong></td>
+                                <td>AM5</td>
+                                <td>8/16</td>
+                                <td>3.8-5.3 GHz</td>
+                                <td><div class="score-bar" style="width: 89%"><span>89/100</span></div></td>
+                                <td><div class="score-bar" style="width: 88%"><span>88/100</span></div></td>
+                                <td>1500 zł</td>
+                                <td><span class="rating">8.7/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">8</span></td>
+                                <td class="product-name"><strong>Intel Core i5-13400F</strong></td>
+                                <td>LGA 1700</td>
+                                <td>10/16</td>
+                                <td>2.5-4.6 GHz</td>
+                                <td><div class="score-bar" style="width: 82%"><span>82/100</span></div></td>
+                                <td><div class="score-bar" style="width: 78%"><span>78/100</span></div></td>
+                                <td>850 zł</td>
+                                <td><span class="rating">8.5/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">9</span></td>
+                                <td class="product-name"><strong>AMD Ryzen 5 5600X</strong></td>
+                                <td>AM4</td>
+                                <td>6/12</td>
+                                <td>3.7-4.6 GHz</td>
+                                <td><div class="score-bar" style="width: 80%"><span>80/100</span></div></td>
+                                <td><div class="score-bar" style="width: 75%"><span>75/100</span></div></td>
+                                <td>750 zł</td>
+                                <td><span class="rating">8.3/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">10</span></td>
+                                <td class="product-name"><strong>Intel Core i3-13100F</strong></td>
+                                <td>LGA 1700</td>
+                                <td>4/8</td>
+                                <td>3.4-4.5 GHz</td>
+                                <td><div class="score-bar" style="width: 75%"><span>75/100</span></div></td>
+                                <td><div class="score-bar" style="width: 70%"><span>70/100</span></div></td>
+                                <td>500 zł</td>
+                                <td><span class="rating">8.0/10</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="table-summary">
+                    <h4>Podsumowanie kategorii CPU:</h4>
+                    <div class="summary-content">
+                        <div class="summary-item">
+                            <i class="fas fa-trophy gold"></i>
+                            <div>
+                                <strong>Zwycięzca Gaming:</strong> AMD Ryzen 7 7800X3D
+                                <small>Najlepsza wydajność w grach dzięki technologii 3D V-Cache</small>
+                            </div>
+                        </div>
+                        <div class="summary-item">
+                            <i class="fas fa-trophy silver"></i>
+                            <div>
+                                <strong>Zwycięzca Produktywność:</strong> Intel Core i9-14900K
+                                <small>Najwięcej rdzeni i najwyższe taktowania dla aplikacji profesjonalnych</small>
+                            </div>
+                        </div>
+                        <div class="summary-item">
+                            <i class="fas fa-trophy bronze"></i>
+                            <div>
+                                <strong>Najlepsza wartość:</strong> AMD Ryzen 5 7600
+                                <small>Doskonały stosunek ceny do wydajności w segmencie mid-range</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabela 2: Karty Graficzne -->
+            <div class="ranking-table" id="table-gpu">
+                <div class="table-header">
+                    <h3><i class="fas fa-video-card"></i> Top 10 Kart Graficznych 2024</h3>
+                    <div class="table-filter">
+                        <span>Filtruj:</span>
+                        <select id="filter-gpu">
+                            <option value="all">Wszystkie</option>
+                            <option value="nvidia">NVIDIA</option>
+                            <option value="amd">AMD</option>
+                            <option value="4k">4K Gaming</option>
+                            <option value="1440p">1440p Gaming</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table class="product-table">
+                        <thead>
+                            <tr>
+                                <th>Miejsce</th>
+                                <th>Model</th>
+                                <th>Producent</th>
+                                <th>VRAM</th>
+                                <th>Wydajność 4K</th>
+                                <th>Wydajność 1440p</th>
+                                <th>Ray Tracing</th>
+                                <th>Cena</th>
+                                <th>Ocena</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="product-row gold">
+                                <td><span class="rank-badge gold">1</span></td>
+                                <td class="product-name">
+                                    <strong>NVIDIA RTX 4090</strong>
+                                    <span class="product-tag performance-tag">Best Performance</span>
+                                </td>
+                                <td><span class="brand-nvidia">NVIDIA</span></td>
+                                <td>24GB GDDR6X</td>
+                                <td><div class="score-bar" style="width: 100%"><span>100/100</span></div></td>
+                                <td><div class="score-bar" style="width: 100%"><span>100/100</span></div></td>
+                                <td><div class="score-bar" style="width: 100%"><span>100/100</span></div></td>
+                                <td>8000 zł</td>
+                                <td><span class="rating">9.9/10</span></td>
+                            </tr>
+                            <tr class="product-row silver">
+                                <td><span class="rank-badge silver">2</span></td>
+                                <td class="product-name">
+                                    <strong>AMD RX 7900 XTX</strong>
+                                    <span class="product-tag value-tag">Best Value High-End</span>
+                                </td>
+                                <td><span class="brand-amd">AMD</span></td>
+                                <td>24GB GDDR6</td>
+                                <td><div class="score-bar" style="width: 88%"><span>88/100</span></div></td>
+                                <td><div class="score-bar" style="width: 95%"><span>95/100</span></div></td>
+                                <td><div class="score-bar" style="width: 85%"><span>85/100</span></div></td>
+                                <td>4800 zł</td>
+                                <td><span class="rating">9.5/10</span></td>
+                            </tr>
+                            <tr class="product-row bronze">
+                                <td><span class="rank-badge bronze">3</span></td>
+                                <td class="product-name">
+                                    <strong>NVIDIA RTX 4080 Super</strong>
+                                    <span class="product-tag premium-tag">Premium Choice</span>
+                                </td>
+                                <td><span class="brand-nvidia">NVIDIA</span></td>
+                                <td>16GB GDDR6X</td>
+                                <td><div class="score-bar" style="width: 78%"><span>78/100</span></div></td>
+                                <td><div class="score-bar" style="width: 92%"><span>92/100</span></div></td>
+                                <td><div class="score-bar" style="width: 96%"><span>96/100</span></div></td>
+                                <td>5200 zł</td>
+                                <td><span class="rating">9.4/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">4</span></td>
+                                <td class="product-name">
+                                    <strong>NVIDIA RTX 4070 Ti Super</strong>
+                                    <span class="product-tag balanced-tag">Balanced</span>
+                                </td>
+                                <td><span class="brand-nvidia">NVIDIA</span></td>
+                                <td>16GB GDDR6X</td>
+                                <td><div class="score-bar" style="width: 68%"><span>68/100</span></div></td>
+                                <td><div class="score-bar" style="width: 90%"><span>90/100</span></div></td>
+                                <td><div class="score-bar" style="width: 88%"><span>88/100</span></div></td>
+                                <td>3800 zł</td>
+                                <td><span class="rating">9.2/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">5</span></td>
+                                <td class="product-name">
+                                    <strong>AMD RX 7800 XT</strong>
+                                    <span class="product-tag budget-tag">Best 1440p Value</span>
+                                </td>
+                                <td><span class="brand-amd">AMD</span></td>
+                                <td>16GB GDDR6</td>
+                                <td><div class="score-bar" style="width: 55%"><span>55/100</span></div></td>
+                                <td><div class="score-bar" style="width: 88%"><span>88/100</span></div></td>
+                                <td><div class="score-bar" style="width: 75%"><span>75/100</span></div></td>
+                                <td>2800 zł</td>
+                                <td><span class="rating">9.1/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">6</span></td>
+                                <td class="product-name"><strong>NVIDIA RTX 4070 Super</strong></td>
+                                <td><span class="brand-nvidia">NVIDIA</span></td>
+                                <td>12GB GDDR6X</td>
+                                <td><div class="score-bar" style="width: 62%"><span>62/100</span></div></td>
+                                <td><div class="score-bar" style="width: 85%"><span>85/100</span></div></td>
+                                <td><div class="score-bar" style="width: 82%"><span>82/100</span></div></td>
+                                <td>3200 zł</td>
+                                <td><span class="rating">8.9/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">7</span></td>
+                                <td class="product-name"><strong>AMD RX 7700 XT</strong></td>
+                                <td><span class="brand-amd">AMD</span></td>
+                                <td>12GB GDDR6</td>
+                                <td><div class="score-bar" style="width: 48%"><span>48/100</span></div></td>
+                                <td><div class="score-bar" style="width: 80%"><span>80/100</span></div></td>
+                                <td><div class="score-bar" style="width: 65%"><span>65/100</span></div></td>
+                                <td>2300 zł</td>
+                                <td><span class="rating">8.7/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">8</span></td>
+                                <td class="product-name"><strong>NVIDIA RTX 4060 Ti 16GB</strong></td>
+                                <td><span class="brand-nvidia">NVIDIA</span></td>
+                                <td>16GB GDDR6</td>
+                                <td><div class="score-bar" style="width: 45%"><span>45/100</span></div></td>
+                                <td><div class="score-bar" style="width: 78%"><span>78/100</span></div></td>
+                                <td><div class="score-bar" style="width: 75%"><span>75/100</span></div></td>
+                                <td>2200 zł</td>
+                                <td><span class="rating">8.5/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">9</span></td>
+                                <td class="product-name"><strong>AMD RX 7600</strong></td>
+                                <td><span class="brand-amd">AMD</span></td>
+                                <td>8GB GDDR6</td>
+                                <td><div class="score-bar" style="width: 35%"><span>35/100</span></div></td>
+                                <td><div class="score-bar" style="width: 75%"><span>75/100</span></div></td>
+                                <td><div class="score-bar" style="width: 55%"><span>55/100</span></div></td>
+                                <td>1200 zł</td>
+                                <td><span class="rating">8.3/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">10</span></td>
+                                <td class="product-name"><strong>NVIDIA RTX 4060</strong></td>
+                                <td><span class="brand-nvidia">NVIDIA</span></td>
+                                <td>8GB GDDR6</td>
+                                <td><div class="score-bar" style="width: 38%"><span>38/100</span></div></td>
+                                <td><div class="score-bar" style="width: 72%"><span>72/100</span></div></td>
+                                <td><div class="score-bar" style="width: 70%"><span>70/100</span></div></td>
+                                <td>1500 zł</td>
+                                <td><span class="rating">8.2/10</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="table-summary">
+                    <h4>Podsumowanie kategorii GPU:</h4>
+                    <div class="summary-content">
+                        <div class="summary-item">
+                            <i class="fas fa-trophy gold"></i>
+                            <div>
+                                <strong>Bezkompromisowa wydajność:</strong> NVIDIA RTX 4090
+                                <small>Najpotężniejsza karta graficzna dla graczy 4K i profesjonalistów</small>
+                            </div>
+                        </div>
+                        <div class="summary-item">
+                            <i class="fas fa-trophy silver"></i>
+                            <div>
+                                <strong>Najlepsza wartość High-End:</strong> AMD RX 7900 XTX
+                                <small>24GB VRAM za połowę ceny RTX 4090, doskonała wydajność 1440p/4K</small>
+                            </div>
+                        </div>
+                        <div class="summary-item">
+                            <i class="fas fa-trophy bronze"></i>
+                            <div>
+                                <strong>Najlepszy ray tracing:</strong> NVIDIA RTX 4080 Super
+                                <small>Doskonały ray tracing, DLSS 3.5, idealny dla graczy 4K z RT</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabela 3: Pamięć RAM -->
+            <div class="ranking-table" id="table-ram">
+                <div class="table-header">
+                    <h3><i class="fas fa-memory"></i> Top 8 Pamięci RAM 2024</h3>
+                    <div class="table-filter">
+                        <span>Filtruj:</span>
+                        <select id="filter-ram">
+                            <option value="all">Wszystkie</option>
+                            <option value="ddr5">DDR5</option>
+                            <option value="ddr4">DDR4</option>
+                            <option value="rgb">RGB</option>
+                            <option value="lowlatency">Niskie opóźnienia</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table class="product-table">
+                        <thead>
+                            <tr>
+                                <th>Miejsce</th>
+                                <th>Model</th>
+                                <th>Typ</th>
+                                <th>Pojemność</th>
+                                <th>Taktowanie</th>
+                                <th>Opóźnienia (CL)</th>
+                                <th>RGB</th>
+                                <th>Cena za 32GB</th>
+                                <th>Ocena</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="product-row gold">
+                                <td><span class="rank-badge gold">1</span></td>
+                                <td class="product-name">
+                                    <strong>G.Skill Trident Z5 RGB</strong>
+                                    <span class="product-tag performance-tag">Best Overall</span>
+                                </td>
+                                <td>DDR5</td>
+                                <td>32GB (2x16GB)</td>
+                                <td>6000 MHz</td>
+                                <td>CL30</td>
+                                <td><i class="fas fa-check yes"></i></td>
+                                <td>650 zł</td>
+                                <td><span class="rating">9.7/10</span></td>
+                            </tr>
+                            <tr class="product-row silver">
+                                <td><span class="rank-badge silver">2</span></td>
+                                <td class="product-name">
+                                    <strong>Corsair Dominator Platinum RGB</strong>
+                                    <span class="product-tag premium-tag">Premium</span>
+                                </td>
+                                <td>DDR5</td>
+                                <td>32GB (2x16GB)</td>
+                                <td>6400 MHz</td>
+                                <td>CL32</td>
+                                <td><i class="fas fa-check yes"></i></td>
+                                <td>850 zł</td>
+                                <td><span class="rating">9.5/10</span></td>
+                            </tr>
+                            <tr class="product-row bronze">
+                                <td><span class="rank-badge bronze">3</span></td>
+                                <td class="product-name">
+                                    <strong>Kingston Fury Beast RGB</strong>
+                                    <span class="product-tag value-tag">Best Value</span>
+                                </td>
+                                <td>DDR5</td>
+                                <td>32GB (2x16GB)</td>
+                                <td>6000 MHz</td>
+                                <td>CL36</td>
+                                <td><i class="fas fa-check yes"></i></td>
+                                <td>550 zł</td>
+                                <td><span class="rating">9.3/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">4</span></td>
+                                <td class="product-name"><strong>G.Skill Ripjaws S5</strong></td>
+                                <td>DDR5</td>
+                                <td>32GB (2x16GB)</td>
+                                <td>6000 MHz</td>
+                                <td>CL30</td>
+                                <td><i class="fas fa-times no"></i></td>
+                                <td>500 zł</td>
+                                <td><span class="rating">9.1/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">5</span></td>
+                                <td class="product-name"><strong>Corsair Vengeance RGB</strong></td>
+                                <td>DDR5</td>
+                                <td>32GB (2x16GB)</td>
+                                <td>5600 MHz</td>
+                                <td>CL36</td>
+                                <td><i class="fas fa-check yes"></i></td>
+                                <td>600 zł</td>
+                                <td><span class="rating">8.9/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">6</span></td>
+                                <td class="product-name"><strong>TeamGroup T-Force Delta RGB</strong></td>
+                                <td>DDR5</td>
+                                <td>32GB (2x16GB)</td>
+                                <td>6000 MHz</td>
+                                <td>CL38</td>
+                                <td><i class="fas fa-check yes"></i></td>
+                                <td>520 zł</td>
+                                <td><span class="rating">8.7/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">7</span></td>
+                                <td class="product-name"><strong>G.Skill Trident Z Neo</strong></td>
+                                <td>DDR4</td>
+                                <td>32GB (2x16GB)</td>
+                                <td>3600 MHz</td>
+                                <td>CL16</td>
+                                <td><i class="fas fa-check yes"></i></td>
+                                <td>450 zł</td>
+                                <td><span class="rating">8.5/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">8</span></td>
+                                <td class="product-name"><strong>Corsair Vengeance LPX</strong></td>
+                                <td>DDR4</td>
+                                <td>32GB (2x16GB)</td>
+                                <td>3200 MHz</td>
+                                <td>CL16</td>
+                                <td><i class="fas fa-times no"></i></td>
+                                <td>350 zł</td>
+                                <td><span class="rating">8.3/10</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="table-summary">
+                    <h4>Podsumowanie kategorii RAM:</h4>
+                    <div class="summary-content">
+                        <div class="summary-item">
+                            <i class="fas fa-trophy gold"></i>
+                            <div>
+                                <strong>Najlepszy ogółem:</strong> G.Skill Trident Z5 RGB
+                                <small>Doskonała równowaga między wydajnością, estetyką i ceną</small>
+                            </div>
+                        </div>
+                        <div class="summary-item">
+                            <i class="fas fa-trophy silver"></i>
+                            <div>
+                                <strong>Najlepszy premium:</strong> Corsair Dominator Platinum
+                                <small>Najwyższe taktowania, doskonała jakość wykonania</small>
+                            </div>
+                        </div>
+                        <div class="summary-item">
+                            <i class="fas fa-trophy bronze"></i>
+                            <div>
+                                <strong>Najlepsza wartość:</strong> Kingston Fury Beast RGB
+                                <small>Dobra wydajność za przystępną cenę, ładne RGB</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabela 4: Dyski (Przykładowa) -->
+            <div class="ranking-table" id="table-storage">
+                <div class="table-header">
+                    <h3><i class="fas fa-hdd"></i> Top 6 Dysków SSD 2024</h3>
+                    <div class="table-filter">
+                        <span>Filtruj:</span>
+                        <select id="filter-storage">
+                            <option value="all">Wszystkie</option>
+                            <option value="nvme">NVMe</option>
+                            <option value="sata">SATA</option>
+                            <option value="gen4">PCIe 4.0</option>
+                            <option value="gen5">PCIe 5.0</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table class="product-table">
+                        <thead>
+                            <tr>
+                                <th>Miejsce</th>
+                                <th>Model</th>
+                                <th>Typ</th>
+                                <th>Pojemność</th>
+                                <th>Czytanie</th>
+                                <th>Zapisywanie</th>
+                                <th>TBW</th>
+                                <th>Cena za 1TB</th>
+                                <th>Ocena</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="product-row gold">
+                                <td><span class="rank-badge gold">1</span></td>
+                                <td class="product-name">
+                                    <strong>Samsung 990 Pro</strong>
+                                    <span class="product-tag performance-tag">Best Overall</span>
+                                </td>
+                                <td>NVMe PCIe 4.0</td>
+                                <td>2TB</td>
+                                <td>7450 MB/s</td>
+                                <td>6900 MB/s</td>
+                                <td>1200 TB</td>
+                                <td>450 zł</td>
+                                <td><span class="rating">9.8/10</span></td>
+                            </tr>
+                            <tr class="product-row silver">
+                                <td><span class="rank-badge silver">2</span></td>
+                                <td class="product-name">
+                                    <strong>WD Black SN850X</strong>
+                                    <span class="product-tag gaming-tag">Best Gaming</span>
+                                </td>
+                                <td>NVMe PCIe 4.0</td>
+                                <td>2TB</td>
+                                <td>7300 MB/s</td>
+                                <td>6600 MB/s</td>
+                                <td>1200 TB</td>
+                                <td>400 zł</td>
+                                <td><span class="rating">9.6/10</span></td>
+                            </tr>
+                            <tr class="product-row bronze">
+                                <td><span class="rank-badge bronze">3</span></td>
+                                <td class="product-name">
+                                    <strong>Kingston KC3000</strong>
+                                    <span class="product-tag value-tag">Best Value</span>
+                                </td>
+                                <td>NVMe PCIe 4.0</td>
+                                <td>2TB</td>
+                                <td>7000 MB/s</td>
+                                <td>6000 MB/s</td>
+                                <td>800 TB</td>
+                                <td>380 zł</td>
+                                <td><span class="rating">9.4/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">4</span></td>
+                                <td class="product-name"><strong>Crucial P5 Plus</strong></td>
+                                <td>NVMe PCIe 4.0</td>
+                                <td>2TB</td>
+                                <td>6600 MB/s</td>
+                                <td>5000 MB/s</td>
+                                <td>1200 TB</td>
+                                <td>350 zł</td>
+                                <td><span class="rating">9.2/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">5</span></td>
+                                <td class="product-name"><strong>Samsung 970 Evo Plus</strong></td>
+                                <td>NVMe PCIe 3.0</td>
+                                <td>2TB</td>
+                                <td>3500 MB/s</td>
+                                <td>3300 MB/s</td>
+                                <td>1200 TB</td>
+                                <td>300 zł</td>
+                                <td><span class="rating">9.0/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">6</span></td>
+                                <td class="product-name"><strong>Crucial MX500</strong></td>
+                                <td>SATA 3</td>
+                                <td>2TB</td>
+                                <td>560 MB/s</td>
+                                <td>510 MB/s</td>
+                                <td>700 TB</td>
+                                <td>250 zł</td>
+                                <td><span class="rating">8.8/10</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="table-summary">
+                    <h4>Podsumowanie kategorii Dyski:</h4>
+                    <div class="summary-content">
+                        <div class="summary-item">
+                            <i class="fas fa-trophy gold"></i>
+                            <div>
+                                <strong>Najlepszy ogółem:</strong> Samsung 990 Pro
+                                <small>Najwyższa wydajność, doskonała trwałość, świetne oprogramowanie</small>
+                            </div>
+                        </div>
+                        <div class="summary-item">
+                            <i class="fas fa-trophy silver"></i>
+                            <div>
+                                <strong>Najlepszy dla graczy:</strong> WD Black SN850X
+                                <small>Optymalizowany pod kątem gaming, DirectStorage ready</small>
+                            </div>
+                        </div>
+                        <div class="summary-item">
+                            <i class="fas fa-trophy bronze"></i>
+                            <div>
+                                <strong>Najlepsza wartość:</strong> Kingston KC3000
+                                <small>Wysoka wydajność za przystępną cenę</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabela 5: Płyty Główne (Przykładowa) -->
+            <div class="ranking-table" id="table-motherboard">
+                <div class="table-header">
+                    <h3><i class="fas fa-server"></i> Top 7 Płyt Głównych 2024</h3>
+                    <div class="table-filter">
+                        <span>Filtruj:</span>
+                        <select id="filter-motherboard">
+                            <option value="all">Wszystkie</option>
+                            <option value="am5">AMD AM5</option>
+                            <option value="lga1700">Intel LGA1700</option>
+                            <option value="gaming">Gaming</option>
+                            <option value="overclock">Overclocking</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table class="product-table">
+                        <thead>
+                            <tr>
+                                <th>Miejsce</th>
+                                <th>Model</th>
+                                <th>Socket</th>
+                                <th>Chipset</th>
+                                <th>RAM</th>
+                                <th>PCIe</th>
+                                <th>WiFi</th>
+                                <th>Cena</th>
+                                <th>Ocena</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="product-row gold">
+                                <td><span class="rank-badge gold">1</span></td>
+                                <td class="product-name">
+                                    <strong>ASUS ROG Crosshair X670E Hero</strong>
+                                    <span class="product-tag premium-tag">Premium</span>
+                                </td>
+                                <td>AM5</td>
+                                <td>X670E</td>
+                                <td>DDR5 6400+</td>
+                                <td>PCIe 5.0</td>
+                                <td><i class="fas fa-check yes"></i></td>
+                                <td>2500 zł</td>
+                                <td><span class="rating">9.7/10</span></td>
+                            </tr>
+                            <tr class="product-row silver">
+                                <td><span class="rank-badge silver">2</span></td>
+                                <td class="product-name">
+                                    <strong>MSI MPG Z790 Carbon WiFi</strong>
+                                    <span class="product-tag gaming-tag">Best Gaming</span>
+                                </td>
+                                <td>LGA1700</td>
+                                <td>Z790</td>
+                                <td>DDR5 7200+</td>
+                                <td>PCIe 5.0</td>
+                                <td><i class="fas fa-check yes"></i></td>
+                                <td>1800 zł</td>
+                                <td><span class="rating">9.5/10</span></td>
+                            </tr>
+                            <tr class="product-row bronze">
+                                <td><span class="rank-badge bronze">3</span></td>
+                                <td class="product-name">
+                                    <strong>Gigabyte B650 AORUS Elite AX</strong>
+                                    <span class="product-tag value-tag">Best Value</span>
+                                </td>
+                                <td>AM5</td>
+                                <td>B650</td>
+                                <td>DDR5 6000</td>
+                                <td>PCIe 4.0</td>
+                                <td><i class="fas fa-check yes"></i></td>
+                                <td>900 zł</td>
+                                <td><span class="rating">9.3/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">4</span></td>
+                                <td class="product-name"><strong>ASUS TUF Gaming B760-PLUS WiFi</strong></td>
+                                <td>LGA1700</td>
+                                <td>B760</td>
+                                <td>DDR5 7200</td>
+                                <td>PCIe 5.0</td>
+                                <td><i class="fas fa-check yes"></i></td>
+                                <td>850 zł</td>
+                                <td><span class="rating">9.1/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">5</span></td>
+                                <td class="product-name"><strong>ASRock B650E Steel Legend WiFi</strong></td>
+                                <td>AM5</td>
+                                <td>B650E</td>
+                                <td>DDR5 6000</td>
+                                <td>PCIe 5.0</td>
+                                <td><i class="fas fa-check yes"></i></td>
+                                <td>950 zł</td>
+                                <td><span class="rating">8.9/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">6</span></td>
+                                <td class="product-name"><strong>MSI PRO B650-P WiFi</strong></td>
+                                <td>AM5</td>
+                                <td>B650</td>
+                                <td>DDR5 6000</td>
+                                <td>PCIe 4.0</td>
+                                <td><i class="fas fa-check yes"></i></td>
+                                <td>750 zł</td>
+                                <td><span class="rating">8.7/10</span></td>
+                            </tr>
+                            <tr class="product-row">
+                                <td><span class="rank-badge">7</span></td>
+                                <td class="product-name"><strong>Gigabyte H610M S2H DDR4</strong></td>
+                                <td>LGA1700</td>
+                                <td>H610</td>
+                                <td>DDR4 3200</td>
+                                <td>PCIe 4.0</td>
+                                <td><i class="fas fa-times no"></i></td>
+                                <td>400 zł</td>
+                                <td><span class="rating">8.5/10</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="table-summary">
+                    <h4>Podsumowanie kategorii Płyty Główne:</h4>
+                    <div class="summary-content">
+                        <div class="summary-item">
+                            <i class="fas fa-trophy gold"></i>
+                            <div>
+                                <strong>Najlepsza premium:</strong> ASUS ROG Crosshair X670E Hero
+                                <small>Najlepsze możliwości rozbudowy, doskonały VRM, premium jakość</small>
+                            </div>
+                        </div>
+                        <div class="summary-item">
+                            <i class="fas fa-trophy silver"></i>
+                            <div>
+                                <strong>Najlepsza gaming:</strong> MSI MPG Z790 Carbon WiFi
+                                <small>Świetna obsługa RAM, stabilny overclocking, styl gamingowy</small>
+                            </div>
+                        </div>
+                        <div class="summary-item">
+                            <i class="fas fa-trophy bronze"></i>
+                            <div>
+                                <strong>Najlepsza wartość:</strong> Gigabyte B650 AORUS Elite AX
+                                <small>Wszystko co potrzebne za rozsądną cenę, solidny VRM</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="comparison-section">
+            <h2>Porównanie cenowe - przeglądarka cen</h2>
+            <p>Sprawdź aktualne ceny w polskich sklepach internetowych</p>
+            
+            <div class="price-comparison">
+                <div class="price-filters">
+                    <div class="filter-group">
+                        <label for="price-component">Komponent:</label>
+                        <select id="price-component">
+                            <option value="cpu">Procesory</option>
+                            <option value="gpu">Karty Graficzne</option>
+                            <option value="ram">Pamięć RAM</option>
+                            <option value="ssd">Dyski SSD</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="price-sort">Sortuj według:</label>
+                        <select id="price-sort">
+                            <option value="price-asc">Cena rosnąco</option>
+                            <option value="price-desc">Cena malejąco</option>
+                            <option value="rating">Ocena</option>
+                            <option value="popularity">Popularność</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="price-results">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Produkt</th>
+                                <th>X-Kom</th>
+                                <th>Morele</th>
+                                <th>Komputronik</th>
+                                <th>Media Expert</th>
+                                <th>Różnica</th>
+                                <th>Akcja</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="price-product">
+                                    <strong>AMD Ryzen 7 7800X3D</strong>
+                                    <small>Najlepszy gaming CPU</small>
+                                </td>
+                                <td class="price-shop" data-shop="X-Kom">1799 zł</td>
+                                <td class="price-shop lowest" data-shop="Morele">1750 zł</td>
+                                <td class="price-shop" data-shop="Komputronik">1820 zł</td>
+                                <td class="price-shop highest" data-shop="Media Expert">1850 zł</td>
+                                <td class="price-difference positive">100 zł</td>
+                                <td class="price-link">
+                                    <a href="#" target="_blank">Porównaj</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="price-product">
+                                    <strong>NVIDIA RTX 4070 Super</strong>
+                                    <small>Wydajność 1440p gaming</small>
+                                </td>
+                                <td class="price-shop" data-shop="X-Kom">3199 zł</td>
+                                <td class="price-shop lowest" data-shop="Morele">3150 zł</td>
+                                <td class="price-shop" data-shop="Komputronik">3250 zł</td>
+                                <td class="price-shop highest" data-shop="Media Expert">3299 zł</td>
+                                <td class="price-difference positive">149 zł</td>
+                                <td class="price-link">
+                                    <a href="#" target="_blank">Porównaj</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="price-product">
+                                    <strong>G.Skill Trident Z5 RGB 32GB</strong>
+                                    <small>DDR5 6000MHz CL30</small>
+                                </td>
+                                <td class="price-shop lowest" data-shop="X-Kom">620 zł</td>
+                                <td class="price-shop" data-shop="Morele">640 zł</td>
+                                <td class="price-shop" data-shop="Komputronik">630 zł</td>
+                                <td class="price-shop highest" data-shop="Media Expert">670 zł</td>
+                                <td class="price-difference positive">50 zł</td>
+                                <td class="price-link">
+                                    <a href="#" target="_blank">Porównaj</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="price-product">
+                                    <strong>Samsung 990 Pro 2TB</strong>
+                                    <small>NVMe PCIe 4.0 SSD</small>
+                                </td>
+                                <td class="price-shop" data-shop="X-Kom">890 zł</td>
+                                <td class="price-shop lowest" data-shop="Morele">870 zł</td>
+                                <td class="price-shop" data-shop="Komputronik">880 zł</td>
+                                <td class="price-shop highest" data-shop="Media Expert">920 zł</td>
+                                <td class="price-difference positive">50 zł</td>
+                                <td class="price-link">
+                                    <a href="#" target="_blank">Porównaj</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="price-product">
+                                    <strong>AMD Ryzen 5 7600</strong>
+                                    <small>Najlepszy budget CPU</small>
+                                </td>
+                                <td class="price-shop lowest" data-shop="X-Kom">890 zł</td>
+                                <td class="price-shop" data-shop="Morele">910 zł</td>
+                                <td class="price-shop" data-shop="Komputronik">920 zł</td>
+                                <td class="price-shop highest" data-shop="Media Expert">950 zł</td>
+                                <td class="price-difference positive">60 zł</td>
+                                <td class="price-link">
+                                    <a href="#" target="_blank">Porównaj</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="price-product">
+                                    <strong>ASUS ROG Strix B650E-F</strong>
+                                    <small>Płyta główna AM5</small>
+                                </td>
+                                <td class="price-shop" data-shop="X-Kom">1250 zł</td>
+                                <td class="price-shop lowest" data-shop="Morele">1220 zł</td>
+                                <td class="price-shop" data-shop="Komputronik">1240 zł</td>
+                                <td class="price-shop" data-shop="Media Expert">1290 zł</td>
+                                <td class="price-difference positive">70 zł</td>
+                                <td class="price-link">
+                                    <a href="#" target="_blank">Porównaj</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="table-summary">
+                    <h4>Porady dotyczące zakupów:</h4>
+                    <div class="summary-content">
+                        <div class="summary-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Monitoruj ceny:</strong> Używaj porównywarek cen
+                                <small>Ceny mogą się zmieniać codziennie, szczególnie podczas promocji</small>
+                            </div>
+                        </div>
+                        <div class="summary-item">
+                            <i class="fas fa-tag"></i>
+                            <div>
+                                <strong>Czekaj na promocje:</strong> Black Friday, Cyber Monday
+                                <small>Najlepsze okazje pojawiają się podczas dużych promocji</small>
+                            </div>
+                        </div>
+                        <div class="summary-item">
+                            <i class="fas fa-shipping-fast"></i>
+                            <div>
+                                <strong>Uwzględnij koszty:</strong> Dostawa i gwarancja
+                                <small>Sprawdź koszty dostawy i warunki gwarancji przed zakupem</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="comparison-section">
+            <h2>Metodologia rankingu</h2>
+            <div class="methodology-content">
+                <div class="methodology-item">
+                    <h3><i class="fas fa-chart-line"></i> Jak oceniamy produkty</h3>
+                    <p>Nasze rankingi opierają się na:</p>
+                    <ul>
+                        <li><strong>Testach wydajności</strong> - benchmarki gamingowe i produktywnościowe</li>
+                        <li><strong>Analizie cenowej</strong> - stosunek ceny do wydajności</li>
+                        <li><strong>Recenzjach użytkowników</strong> - doświadczenia rzeczywistych użytkowników</li>
+                        <li><strong>Jakości wykonania</strong> - trwałość i niezawodność komponentów</li>
+                        <li><strong>Funkcjach dodatkowych</strong> - software, chłodzenie, RGB itp.</li>
+                    </ul>
+                </div>
+                
+                <div class="methodology-item">
+                    <h3><i class="fas fa-calendar-alt"></i> Aktualizacje</h3>
+                    <p>Ranking jest aktualizowany co kwartał w oparciu o:</p>
+                    <ul>
+                        <li>Nowości rynkowe</li>
+                        <li>Aktualizacje cen</li>
+                        <li>Nowe testy i benchmarki</li>
+                        <li>Opinie społeczności</li>
+                    </ul>
+                    <p class="update-info"><i class="fas fa-info-circle"></i> Ostatnia aktualizacja: Marzec 2024</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Świat Komputerów</h3>
+                    <p>Portal dla entuzjastów technologii i komputerów.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Top Produkty</h3>
+                    <ul>
+                        <li><a href="#table-cpu">Procesory</a></li>
+                        <li><a href="#table-gpu">Karty Graficzne</a></li>
+                        <li><a href="#table-ram">RAM</a></li>
+                        <li><a href="#table-storage">Dyski</a></li>
+                        <li><a href="#table-motherboard">Płyty Główne</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Przydatne narzędzia</h3>
+                    <ul>
+                        <li><a href="#">Kalkulator zasilacza</a></li>
+                        <li><a href="#">Porównanie procesorów</a></li>
+                        <li><a href="#">Kompatybilność RAM</a></li>
+                        <li><a href="#">Budżetowy configurator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p><i class="fas fa-envelope"></i> kontakt@swiatkomputerow.pl</p>
+                    <p><i class="fas fa-phone"></i> +48 123 456 789</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Świat Komputerów. Wszelkie prawa zastrzeżone.</p>
+                <p>Odwiedzin: <span id="visit-counter">0</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Skrypty JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/top-produkty.js"></script>
+</body>
+</html>

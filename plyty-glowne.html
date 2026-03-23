@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Płyty Główne - Świat Komputerów</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/plyty-glowne.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/Designer (11).png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-server"></i>
+                <h1>Płyty Główne</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Strona Główna</a></li>
+                    <li><a href="komponenty.html"><i class="fas fa-microchip"></i> Komponenty</a></li>
+                    <li><a href="procesory.html"><i class="fas fa-microchip"></i> Procesory</a></li>
+                    <li><a href="pamiec-ram.html"><i class="fas fa-memory"></i> RAM</a></li>
+                    <li><a href="dyski.html"><i class="fas fa-hdd"></i> Dyski</a></li>
+                    <li><a href="plyty-glowne.html" class="active"><i class="fas fa-server"></i> Płyty Główne</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h2>Płyty Główne (Motherboard)</h2>
+            <p>Serce komputera - łączy wszystkie komponenty i decyduje o możliwościach rozbudowy</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="mb-intro">
+            <h2>Czym jest płyta główna?</h2>
+            <p>Płyta główna to podstawowa płytka drukowana w komputerze, która łączy wszystkie komponenty: procesor, pamięć RAM, karty rozszerzeń i urządzenia peryferyjne.</p>
+        </section>
+
+        <section class="mb-configurator">
+            <h2>Konfigurator kompatybilności</h2>
+            <p>Sprawdź kompatybilność płyty głównej z innymi komponentami</p>
+            
+            <div class="configurator-container">
+                <div class="config-steps">
+                    <div class="step active">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Wybierz procesor</h3>
+                            <select id="cpu-select">
+                                <option value="">-- Wybierz procesor --</option>
+                                <option value="intel-1700">Intel LGA 1700 (12th-14th Gen)</option>
+                                <option value="intel-1200">Intel LGA 1200 (10th-11th Gen)</option>
+                                <option value="amd-am5">AMD AM5 (Ryzen 7000)</option>
+                                <option value="amd-am4">AMD AM4 (Ryzen 1000-5000)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Wybierz format płyty</h3>
+                            <div class="format-options">
+                                <label class="format-option">
+                                    <input type="radio" name="format" value="atx">
+                                    <div class="format-card">
+                                        <div class="format-icon">
+                                            <i class="fas fa-desktop"></i>
+                                        </div>
+                                        <div class="format-name">ATX</div>
+                                        <div class="format-desc">Standardowy (305×244 mm)</div>
+                                    </div>
+                                </label>
+                                
+                                <label class="format-option">
+                                    <input type="radio" name="format" value="micro-atx">
+                                    <div class="format-card">
+                                        <div class="format-icon">
+                                            <i class="fas fa-compress-alt"></i>
+                                        </div>
+                                        <div class="format-name">Micro-ATX</div>
+                                        <div class="format-desc">Mniejszy (244×244 mm)</div>
+                                    </div>
+                                </label>
+                                
+                                <label class="format-option">
+                                    <input type="radio" name="format" value="mini-itx">
+                                    <div class="format-card">
+                                        <div class="format-icon">
+                                            <i class="fas fa-laptop"></i>
+                                        </div>
+                                        <div class="format-name">Mini-ITX</div>
+                                        <div class="format-desc">Miniatura (170×170 mm)</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Dodatkowe wymagania</h3>
+                            <div class="requirements-checklist">
+                                <label><input type="checkbox" name="req" value="wifi"> Wi-Fi i Bluetooth</label>
+                                <label><input type="checkbox" name="req" value="rgb"> Światła RGB</label>
+                                <label><input type="checkbox" name="req" value="thunderbolt"> Thunderbolt</label>
+                                <label><input type="checkbox" name="req" value="10g"> Port 10 Gb Ethernet</label>
+                                <label><input type="checkbox" name="req" value="multiple-gpu"> Wiele kart graficznych</label>
+                                <label><input type="checkbox" name="req" value="many-m2"> Wiele slotów M.2</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="config-results">
+                    <div class="results-header">
+                        <h3>Rekomendowane płyty główne</h3>
+                        <button id="reset-config" class="btn-reset">
+                            <i class="fas fa-redo"></i> Resetuj
+                        </button>
+                    </div>
+                    
+                    <div class="results-container">
+                        <div class="initial-message">
+                            <i class="fas fa-microchip"></i>
+                            <p>Wybierz komponenty, aby zobaczyć rekomendacje</p>
+                        </div>
+                        
+                        <div class="mb-results-grid" style="display: none;">
+                            <!-- Wyniki będą dodawane dynamicznie -->
+                        </div>
+                    </div>
+                    
+                    <div class="compatibility-check">
+                        <h4>Sprawdź kompatybilność:</h4>
+                        <div class="compat-items">
+                            <div class="compat-item">
+                                <span class="compat-label">Procesor:</span>
+                                <span class="compat-status" id="cpu-compat">Nie wybrano</span>
+                            </div>
+                            <div class="compat-item">
+                                <span class="compat-label">Format:</span>
+                                <span class="compat-status" id="format-compat">Nie wybrano</span>
+                            </div>
+                            <div class="compat-item">
+                                <span class="compat-label">RAM:</span>
+                                <span class="compat-status" id="ram-compat">DDR4/DDR5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-formats">
+            <h2>Formaty płyt głównych</h2>
+            <div class="formats-comparison">
+                <div class="format-details atx">
+                    <div class="format-header">
+                        <h3>ATX</h3>
+                        <div class="format-size">305×244 mm</div>
+                    </div>
+                    <div class="format-specs">
+                        <div class="spec">
+                            <i class="fas fa-expand-alt"></i>
+                            <span>Pełny rozmiar</span>
+                        </div>
+                        <div class="spec">
+                            <i class="fas fa-microchip"></i>
+                            <span>7+ slotów PCIe</span>
+                        </div>
+                        <div class="spec">
+                            <i class="fas fa-memory"></i>
+                            <span>4+ sloty RAM</span>
+                        </div>
+                        <div class="spec">
+                            <i class="fas fa-plug"></i>
+                            <span>Pełna rozbudowa</span>
+                        </div>
+                    </div>
+                    <div class="format-pros-cons">
+                        <div class="pros">
+                            <h4>Zalety:</h4>
+                            <ul>
+                                <li>Najwięcej slotów rozszerzeń</li>
+                                <li>Lepsze chłodzenie</li>
+                                <li>Więcej portów</li>
+                                <li>Lepsza dla overclockingu</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>Wady:</h4>
+                            <ul>
+                                <li>Duży rozmiar</li>
+                                <li>Wymaga większej obudowy</li>
+                                <li>Wyższa cena</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="format-recommendation">
+                        <strong>Dla:</strong> Gaming, stacje robocze, entuzjastów
+                    </div>
+                </div>
+                
+                <div class="format-details micro-atx">
+                    <div class="format-header">
+                        <h3>Micro-ATX</h3>
+                        <div class="format-size">244×244 mm</div>
+                    </div>
+                    <div class="format-specs">
+                        <div class="spec">
+                            <i class="fas fa-compress-alt"></i>
+                            <span>Średni rozmiar</span>
+                        </div>
+                        <div class="spec">
+                            <i class="fas fa-microchip"></i>
+                            <span>4 sloty PCIe</span>
+                        </div>
+                        <div class="spec">
+                            <i class="fas fa-memory"></i>
+                            <span>4 sloty RAM</span>
+                        </div>
+                        <div class="spec">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>Kompromis cena/funkcje</span>
+                        </div>
+                    </div>
+                    <div class="format-pros-cons">
+                        <div class="pros">
+                            <h4>Zalety:</h4>
+                            <ul>
+                                <li>Mniejsza niż ATX</li>
+                                <li>Niższa cena</li>
+                                <li>Wystarczające sloty</li>
+                                <li>Kompatybilna z większością obudów</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>Wady:</h4>
+                            <ul>
+                                <li>Mniej slotów PCIe</li>
+                                <li>Często mniej portów</li>
+                                <li>Gorsze chłodzenie</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="format-recommendation">
+                        <strong>Dla:</strong> Budget gaming, biuro, kompakty
+                    </div>
+                </div>
+                
+                <div class="format-details mini-itx">
+                    <div class="format-header">
+                        <h3>Mini-ITX</h3>
+                        <div class="format-size">170×170 mm</div>
+                    </div>
+                    <div class="format-specs">
+                        <div class="spec">
+                            <i class="fas fa-laptop"></i>
+                            <span>Minimalny rozmiar</span>
+                        </div>
+                        <div class="spec">
+                            <i class="fas fa-microchip"></i>
+                            <span>1 slot PCIe</span>
+                        </div>
+                        <div class="spec">
+                            <i class="fas fa-memory"></i>
+                            <span>2 sloty RAM</span>
+                        </div>
+                        <div class="spec">
+                            <i class="fas fa-compact-disc"></i>
+                            <span>Mini PC/SFF</span>
+                        </div>
+                    </div>
+                    <div class="format-pros-cons">
+                        <div class="pros">
+                            <h4>Zalety:</h4>
+                            <ul>
+                                <li>Bardzo kompaktowa</li>
+                                <li>Idealna do SFF</li>
+                                <li>Niska moc</li>
+                                <li>Estetyka</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>Wady:</h4>
+                            <ul>
+                                <li>Bardzo ograniczona rozbudowa</li>
+                                <li>Wysoka cena</li>
+                                <li>Problemy z chłodzeniem</li>
+                                <li>Trudny montaż</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="format-recommendation">
+                        <strong>Dla:</strong> Mini PC, HTPC, biuro kompaktowe
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-chipsets">
+            <h2>Chipsety - Intel vs AMD</h2>
+            <div class="chipsets-tabs">
+                <div class="chipset-tab-buttons">
+                    <button class="chipset-tab-btn active" data-chipset="intel">Intel</button>
+                    <button class="chipset-tab-btn" data-chipset="amd">AMD</button>
+                </div>
+                
+                <div class="chipset-tab-content active" id="chipset-intel">
+                    <div class="chipsets-grid">
+                        <div class="chipset-card">
+                            <div class="chipset-header">
+                                <h3>Z790</h3>
+                                <div class="chipset-class">Flagship</div>
+                            </div>
+                            <div class="chipset-features">
+                                <div class="feature">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>CPU: 12th-14th Gen</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-memory"></i>
+                                    <span>RAM: DDR5</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>PCIe 5.0</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-usb"></i>
+                                    <span>USB 3.2 Gen 2x2</span>
+                                </div>
+                            </div>
+                            <div class="chipset-overclock">
+                                <span class="oc-label">Overclocking:</span>
+                                <span class="oc-value">CPU + RAM</span>
+                            </div>
+                            <div class="chipset-price">Płyty: 1000-3000 zł</div>
+                            <div class="chipset-desc">
+                                Najwyższa półka dla entuzjastów. Maksymalna wydajność i funkcje.
+                            </div>
+                        </div>
+                        
+                        <div class="chipset-card">
+                            <div class="chipset-header">
+                                <h3>B760</h3>
+                                <div class="chipset-class">Mainstream</div>
+                            </div>
+                            <div class="chipset-features">
+                                <div class="feature">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>CPU: 12th-14th Gen</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-memory"></i>
+                                    <span>RAM: DDR4/DDR5</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>PCIe 4.0/5.0</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-usb"></i>
+                                    <span>USB 3.2 Gen 2</span>
+                                </div>
+                            </div>
+                            <div class="chipset-overclock">
+                                <span class="oc-label">Overclocking:</span>
+                                <span class="oc-value">Tylko RAM</span>
+                            </div>
+                            <div class="chipset-price">Płyty: 600-1200 zł</div>
+                            <div class="chipset-desc">
+                                Najlepszy stosunek ceny do jakości. Dla większości użytkowników.
+                            </div>
+                        </div>
+                        
+                        <div class="chipset-card">
+                            <div class="chipset-header">
+                                <h3>H770</h3>
+                                <div class="chipset-class">Premium</div>
+                            </div>
+                            <div class="chipset-features">
+                                <div class="feature">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>CPU: 12th-14th Gen</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-memory"></i>
+                                    <span>RAM: DDR4/DDR5</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>PCIe 4.0/5.0</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-usb"></i>
+                                    <span>USB 3.2 Gen 2x2</span>
+                                </div>
+                            </div>
+                            <div class="chipset-overclock">
+                                <span class="oc-label">Overclocking:</span>
+                                <span class="oc-value">CPU + RAM</span>
+                            </div>
+                            <div class="chipset-price">Płyty: 800-1800 zł</div>
+                            <div class="chipset-desc">
+                                Pomiędzy B760 a Z790. Dobre funkcje za rozsądną cenę.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chipset-tab-content" id="chipset-amd">
+                    <div class="chipsets-grid">
+                        <div class="chipset-card">
+                            <div class="chipset-header">
+                                <h3>X670E</h3>
+                                <div class="chipset-class">Extreme</div>
+                            </div>
+                            <div class="chipset-features">
+                                <div class="feature">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>CPU: Ryzen 7000</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-memory"></i>
+                                    <span>RAM: DDR5 tylko</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>PCIe 5.0 GPU+SSD</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-usb"></i>
+                                    <span>USB4</span>
+                                </div>
+                            </div>
+                            <div class="chipset-overclock">
+                                <span class="oc-label">Overclocking:</span>
+                                <span class="oc-value">CPU + RAM + GPU</span>
+                            </div>
+                            <div class="chipset-price">Płyty: 1200-3500 zł</div>
+                            <div class="chipset-desc">
+                                Najwyższa wydajność dla entuzjastów. Wszystkie premium funkcje.
+                            </div>
+                        </div>
+                        
+                        <div class="chipset-card">
+                            <div class="chipset-header">
+                                <h3>B650</h3>
+                                <div class="chipset-class">Mainstream</div>
+                            </div>
+                            <div class="chipset-features">
+                                <div class="feature">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>CPU: Ryzen 7000</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-memory"></i>
+                                    <span>RAM: DDR5 tylko</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>PCIe 5.0 SSD</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-usb"></i>
+                                    <span>USB 3.2 Gen 2</span>
+                                </div>
+                            </div>
+                            <div class="chipset-overclock">
+                                <span class="oc-label">Overclocking:</span>
+                                <span class="oc-value">CPU + RAM</span>
+                            </div>
+                            <div="chipset-price">Płyty: 700-1500 zł</div>
+                            <div class="chipset-desc">
+                                Najlepszy wybór dla większości. PCIe 5.0 dla SSD.
+                            </div>
+                        </div>
+                        
+                        <div class="chipset-card">
+                            <div class="chipset-header">
+                                <h3>A620</h3>
+                                <div class="chipset-class">Budget</div>
+                            </div>
+                            <div class="chipset-features">
+                                <div class="feature">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>CPU: Ryzen 7000</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-memory"></i>
+                                    <span>RAM: DDR5 tylko</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>PCIe 4.0</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-usb"></i>
+                                    <span>USB 3.2 Gen 1</span>
+                                </div>
+                            </div>
+                            <div class="chipset-overclock">
+                                <span class="oc-label">Overclocking:</span>
+                                <span class="oc-value">Brak</span>
+                            </div>
+                            <div class="chipset-price">Płyty: 500-900 zł</div>
+                            <div class="chipset-desc">
+                                Podstawowe płyty dla budżetowych buildów. Brak overclockingu.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-connectors">
+            <h2>Złącza i porty</h2>
+            <div class="connectors-guide">
+                <div class="connector-category">
+                    <h3><i class="fas fa-microchip"></i> Złącza procesora i RAM</h3>
+                    <div class="connector-items">
+                        <div class="connector-item">
+                            <div class="connector-name">Socket CPU</div>
+                            <div class="connector-desc">Gniazdo dla procesora. Musi pasować do CPU.</div>
+                            <div class="connector-examples">
+                                <span class="example">Intel: LGA 1700</span>
+                                <span class="example">AMD: AM5, AM4</span>
+                            </div>
+                        </div>
+                        
+                        <div class="connector-item">
+                            <div class="connector-name">DIMM Sloty</div>
+                            <div class="connector-desc">Gniazda na pamięć RAM. Typ: DDR4 lub DDR5.</div>
+                            <div class="connector-examples">
+                                <span class="example">2 sloty: Mini-ITX</span>
+                                <span class="example">4 sloty: ATX/mATX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="connector-category">
+                    <h3><i class="fas fa-expand-alt"></i> Sloty rozszerzeń</h3>
+                    <div class="connector-items">
+                        <div class="connector-item">
+                            <div class="connector-name">PCIe x16</div>
+                            <div class="connector-desc">Na kartę graficzną. PCIe 4.0 lub 5.0.</div>
+                            <div class="connector-examples">
+                                <span class="example">1-3 sloty</span>
+                                <span class="example">x16/x8/x4</span>
+                            </div>
+                        </div>
+                        
+                        <div class="connector-item">
+                            <div class="connector-name">M.2 Sloty</div>
+                            <div class="connector-desc">Na szybkie SSD NVMe. Różne długości.</div>
+                            <div class="connector-examples">
+                                <span class="example">2280 (najczęstszy)</span>
+                                <span class="example">22110 (długi)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="connector-category">
+                    <h3><i class="fas fa-plug"></i> Porty zewnętrzne</h3>
+                    <div class="connector-items">
+                        <div class="connector-item">
+                            <div class="connector-name">USB</div>
+                            <div class="connector-desc">Do podłączania urządzeń. Wersje 2.0-4.0.</div>
+                            <div class="connector-examples">
+                                <span class="example">USB-C 20Gbps</span>
+                                <span class="example">USB-A 10Gbps</span>
+                            </div>
+                        </div>
+                        
+                        <div class="connector-item">
+                            <div class="connector-name">Audio/Ethernet</div>
+                            <div class="connector-desc">Dźwięk i sieć. Sprawdź szybkość Ethernet.</div>
+                            <div class="connector-examples">
+                                <span class="example">2.5GbE/10GbE</span>
+                                <span class="example">7.1 Audio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-visual-guide">
+            <h2>Przewodnik wizualny - gdzie co podłączyć</h2>
+            <div class="visual-guide-container">
+                <div class="motherboard-diagram">
+                    <div class="diagram-area cpu-socket" data-tooltip="Socket CPU - tu montujesz procesor">
+                        <div class="area-label">CPU</div>
+                    </div>
+                    <div class="diagram-area ram-slots" data-tooltip="Sloty RAM - pamięć operacyjna">
+                        <div class="area-label">RAM</div>
+                    </div>
+                    <div class="diagram-area pcie-slots" data-tooltip="PCIe x16 - karta graficzna">
+                        <div class="area-label">PCIe</div>
+                    </div>
+                    <div class="diagram-area m2-slots" data-tooltip="M.2 - szybkie SSD">
+                        <div class="area-label">M.2</div>
+                    </div>
+                    <div class="diagram-area sata-ports" data-tooltip="SATA - dyski i napędy">
+                        <div class="area-label">SATA</div>
+                    </div>
+                    <div class="diagram-area front-panel" data-tooltip="Panel przedni - przyciski i diody">
+                        <div class="area-label">Front Panel</div>
+                    </div>
+                    <div class="diagram-area power-connectors" data-tooltip="Zasilanie - ATX i CPU">
+                        <div class="area-label">Power</div>
+                    </div>
+                </div>
+                <div class="diagram-legend">
+                    <h3>Legenda:</h3>
+                    <div class="legend-items">
+                        <div class="legend-item">
+                            <div class="legend-color cpu-color"></div>
+                            <span>Socket procesora</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color ram-color"></div>
+                            <span>Sloty pamięci RAM</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color pcie-color"></div>
+                            <span>PCIe dla karty graficznej</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color m2-color"></div>
+                            <span>M.2 dla SSD</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color sata-color"></div>
+                            <span>Porty SATA</span>
+                        </div>
+                    </div>
+                    <div class="installation-tip">
+                        <h4>💡 Wskazówka montażowa:</h4>
+                        <p>Najpierw zamontuj procesor i RAM na płycie, przed umieszczeniem jej w obudowie.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Świat Komputerów</h3>
+                    <p>Portal dla entuzjastów technologii i komputerów.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Komponenty</h3>
+                    <ul>
+                        <li><a href="procesory.html">Procesory</a></li>
+                        <li><a href="pamiec-ram.html">RAM</a></li>
+                        <li><a href="dyski.html">Dyski</a></li>
+                        <li><a href="plyty-glowne.html" class="active">Płyty Główne</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Pozostałe podstrony</h3>
+                    <ul>
+                        <li><a href="gaming.html">Gaming</a></li>
+                        <li><a href="top-produkty.html">Top Produkty</a></li>
+                        <li><a href="historia.html">Historia komputerów</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p><i class="fas fa-envelope"></i> kontakt@swiatkomputerow.pl</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Świat Komputerów. Wszelkie prawa zastrzeżone.</p>
+                <p>Odwiedzin: <span id="visit-counter">0</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/plyty-glowne.js"></script>
+</body>
+</html>
